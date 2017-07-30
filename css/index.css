@@ -1,0 +1,50 @@
+/* 
+* @Author: Marte
+* @Date:   2017-07-24 17:12:31
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-07-24 22:01:14
+*/
+#header{height:90px;
+        width:100%;}
+#header .container{height:87px;background:#7AB5E9;border-bottom:3px solid #2A5CA3;}
+#header .container .ht{ height: 22px;width:246px;float:right; background-color:white;margin-right:30px;padding-left:18px;}
+#header .container .ht .ht1{display:inline-block;width: 16px;height: 16px;background:url(../images/xuebi1.fw.png)no-repeat 0 0;}
+#header .container .ht .ht2{display:inline-block;width: 14px;height: 16px;background:url(../images/xuebi1.fw.png)no-repeat -35px 0;}
+
+#header .container .hb {height: 68px; width: 1918px;float:left;}
+#header .container h3{font-size:24px; color:white;line-height:34px;float:left;}
+#header .container ul{float:right;margin-top:12px;}
+#header .container ul li{float:left;height:55px; }
+#header .container ul li a{display:block;height:55px;padding:0 14px;font-size:12px;line-height:26px;color:white;background:#7AB5E9;}
+#header .container ul li a i{display:block;width: 28px;height: 25px;background:#7AB5E9 url(../images/xuebi1.fw.png)  -70px 0;}
+
+#main{height:818px;width:100%;}
+#main .container{height: 818px;}
+#main .container .main-left{width:197px;height: 818px;float:left;background-color:#417EC8;}
+#main .container .main-left ul li{height:32px;color:white;line-height:32px;font-size:12px;}
+#main .container .main-left ul .yb{border-bottom: 1px solid #2869BD;border-top:1px solid #498BD7;padding-left:38px;}
+#main .container .main-left ul .nb a{padding-left:46px;color:#B9DDFF;}
+#main .container .main-left ul .first{background:#E6E6E6;color:black;}
+#main .container .main-left ul .last{border-bottom:none;}
+
+
+
+
+
+#main .container .main-right{overflow:hidden;height: 818px;border-left:8px solid #D4D2DF;padding-left:6px;}
+#main .container .main-right .mainhead{height: 24px;width:1708px;line-height:24px;border-bottom: 1px solid #E3E3E3;}
+#main .container .main-right .mainhead{color:#636363;font-size:12px;}
+#main .container .main-right .mainhead a{color:#636363;}
+#main .container .main-right .mainmid{height:50px;width:1708px;line-height:50px;}
+#main .container .main-right .mainmid span{padding-left:22px;}
+#main .container .main-right .mainmid label{padding-left:28px;}
+#main .container .main-right .mainmid .shuru{width: 120px;height: 20px;}
+#main .container .main-right .mainmid .bot{width: 58px;height: 20px;background-color:#F4F4F6;text-align:center;border:1px solid #BEBEBE;}
+
+#main .container .main-right .mainmid #shebeileixing{width: 138px;height: 24px;color:#A0A0A0;}
+#main .container .main-right .mainbottom{width: 1690px;height: 375px;border:1px solid #C3BAB5;}
+#main .container .main-right .mainbottom table{width:1690px;height:375px;}
+#main .container .main-right .mainbottom table tr td{text-align:center;}
+#main .container .main-right .mainfoot {width:1692px;height: 44px;}
+#main .container .main-right .mainfoot span{display:inline-block;padding-left:26px;padding-top:18px;}
+#main .container .main-right .mainfoot div{float:right;}

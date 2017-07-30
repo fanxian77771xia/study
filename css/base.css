@@ -1,0 +1,11 @@
+/* 
+* @Author: Marte
+* @Date:   2017-07-24 17:12:43
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-07-24 17:16:36
+*/
+body,h1,h2,h3,h4,h5,h6,ul,p,ol,dl,dt,dd,i{margin:0 auto;padding:0;}
+.claerfix{content:"";display:block;overflow:hidden;visibility:hidden;height:0;clear:both;zoom:1;}
+.container{width:1918px;margin:0 auto;}
+ul li{list-style:none;}
+a{text-decoration:none;}
