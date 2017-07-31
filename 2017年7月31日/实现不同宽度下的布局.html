@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    <style type="text/css">
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    .son1{
+        width:80%;
+        height:500px;
+        background:red;
+        float:left;
+    }
+    .son2{
+        width:20%;
+        height:500px;
+        background:green;
+        float:left;
+    }
+    /*这句之间的空格不能漏*/
+    @media screen and (max-width:800px){
+        .son2{display:none;}
+        .son1{width:100%;}
+    }
+    </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="son1"></div>
+            <div class="son2"></div>
+        </div>
+    </body>
+</html>

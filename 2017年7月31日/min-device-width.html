@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    <style type="text/css">
+    *{margin:0px; padding:0px;}
+    div{
+        height:200px;
+        background:red;
+    }
+    /*大于等于最小值小于最大值*/
+    @media screen and (min-device-width:320px) and (max-device-width:360px){
+        div{background:green;}
+    }
+    @media screen and (min-device-width:360px) and (max-device-width:375px){
+        div{background:blue;}
+    }
+    @media screen and (min-device-width:375px) and (max-device-width:412px){
+       div{background:pink;}
+    }
+    @media screen and (min-device-width:412px) and (max-device-width:414px){
+        div{background:orange;}
+    }
+    @media screen and (min-device-width:414px) and (max-device-width:768px){
+        div{background:grey;}
+    }
+
+    </style>
+    </head>
+    <body>
+    <div></div>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    <style type="text/css">
+        *{margin:0px;padding:0px;}
+        body,html{height:100%;}
+        #container{
+            display:flex;
+            flex-direction: column;
+            height:100%;
+        }
+        #container .header{
+            display:block;
+           /* height:50px;*/
+            flex:10%;
+            background:#666666;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container .center{
+            display:block;
+            flex:80%;
+            display:flex;
+        }
+        #container .center nav{
+            width:15%;
+            background:#8FBAD9;
+            display:flex;
+            justify-content: center;
+        }
+        #container .center main{
+            width:70%;
+            background:#D6D6D6;
+            display:flex;
+            justify-content: center;
+        }
+        #container .center aside{
+            width:15%;
+            background:#E46E51;
+            display:flex;
+            justify-content: center;
+        }
+        #container .footer{
+            display:block;
+            flex:10%;
+           background:#666666;
+           display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    </head>
+    <body>
+    <div id="container">
+        <header class="header">
+            header
+        </header>
+        <div class="center">
+            <nav>
+                nav
+            </nav>
+            <main>
+                main
+            </main>
+            <aside>
+                aside
+            </aside>
+        </div>
+        
+        <footer class="footer">
+            footer
+        </footer>
+    </div>
+    
+
+    </body>
+</html>

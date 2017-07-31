@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    <style type="text/css">
+        *{margin:0px; padding:0px;}
+        #box{
+            width:874px;
+            height:206px;
+            border:1px solid black;
+            margin:100px auto;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:0 46px;
+        }
+        #box>div{
+            width:106px;
+            height:106px;
+            background:#E7E7E7;
+            padding:10px;
+            border-radius: 8px;
+            display:flex;
+            box-shadow:0 -5px 0 0 #BBBBBB inset,0 5px 0 0 #FFFFFF inset, 5px 0 0 0 #D7D7D7 inset,-5px 0 0 0 #D7D7D7 inset;
+        }
+        #box div span{
+            display:block;
+            width:22px;
+            height:22px;
+            background:#333333;
+            border-radius: 50%;
+        }
+        #box>div:nth-child(1){
+            align-items:center;
+            justify-content:center;
+        }
+        #box>div:nth-child(1) span{
+            
+            align-content: center;
+            justify-content:center;
+        } 
+        #box>div:nth-child(2){
+            justify-content:space-between;
+        }
+        #box>div:nth-child(2) span:nth-child(2){
+            
+            align-self:flex-end;
+        }
+        #box div:nth-child(3){
+            justify-content:space-between;
+        }
+        #box div:nth-child(3) span:nth-child(2){
+            
+            align-self:center;
+        }
+        #box div:nth-child(3) span:nth-child(3){
+            
+            align-self:flex-end;
+        }
+        #box div:nth-child(4){
+            flex-wrap:wrap;
+            /*justify-content: space-between;*/
+            align-content: space-between;
+        }
+        
+        #box div:nth-child(4) div{
+            width:100%;
+            display:flex;
+            justify-content: space-between;
+            
+        }
+        #box div:nth-child(5){
+            flex-wrap:wrap;
+             align-content: space-between;
+        }
+        #box div:nth-child(5) div{
+            width:100%;
+            display:flex;
+            justify-content: space-between;
+        }
+        #box div:nth-child(5) div:nth-child(2){
+            justify-content: center;
+        }
+        #box div:nth-child(6){
+            flex-wrap:wrap;
+             align-content: space-between;
+        }
+        #box div:nth-child(6) div{
+            width:100%;
+            display:flex;
+            justify-content: space-between;
+        }
+    </style>
+    </head>
+    <body>
+        <div id="box">
+            <div><span></span></div>
+            <div><span></span><span></span></div>
+            <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+            <div>
+                <div><span></span>
+                <span></span></div>
+            
+                <div><span></span>
+                <span></span></div>
+            
+            </div>
+            <div>
+                <div><span></span>
+                <span></span></div>
+                <div><span></span></div>
+                <div><span></span>
+                <span></span></div>
+            </div>
+            <div>
+                <div><span></span>
+                <span></span></div>
+                <div><span></span><span></span></div>
+                <div><span></span>
+                <span></span></div>
+            </div>
+        </div>
+    </body>
+</html>
