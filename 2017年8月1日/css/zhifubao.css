@@ -1,0 +1,156 @@
+/* 
+* @Author: Marte
+* @Date:   2017-07-31 21:23:44
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-08-01 13:53:30
+*/
+*{margin:0px; padding:0px;}
+html{
+    height:100%;
+}
+body{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height:100%;
+}
+header{
+    width:100%;
+    height:179px;
+    background:#3F454F;
+    
+}
+header .zhongguoyidong{
+    width:100%;
+    height:16px;
+    /*引用的图片名字之间不能有空格*/
+    background:url(../image/pic1.fw.png) no-repeat;
+    background-size: 100%;
+}
+header .zhangdan{
+    color: white;
+    padding:16px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+header .zhangdan i{
+    
+}
+header .zhangdan span{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .zhangdan span i{
+    padding-left: 19px;
+}
+header .saoyisao{
+    
+}
+header .saoyisao ul{
+    padding:25px 25px 30px 25px;
+    list-style: none;
+    display:flex;
+    justify-content: space-between;
+}
+header .saoyisao ul span{
+    display:block;
+    text-align: center;
+    font-size: 35px;
+}    
+header .saoyisao ul i{
+    font-style:normal;
+}
+header .saoyisao ul li{
+    color:white;
+}
+main{
+    display:block;
+    height:100%;
+    flex:1;
+    width:100%;
+    overflow: auto;
+}
+main .box1{
+    display:flex;
+    flex-wrap:wrap;
+}
+main .box1 a{
+    box-sizing: border-box;
+    border: 1px solid black;
+    display:flex;
+    width:25%;
+    height:90px;
+    text-align: center;
+    font-size: 26px;
+    text-decoration: none;
+    flex-direction:column;
+    justify-content:center;
+
+}
+main .box1 a i{
+    display:block;
+    font-size:26px;
+}
+main .box1 a span{
+    font-size: 12px;
+    color:black;
+}
+main .ad{
+    height: 84px;
+    background:url(../image/pic2.fw.png) no-repeat;
+    background-size:100% 100%;
+    margin:15px 0 15px 0; 
+}
+main .box2{
+    display:flex;
+    flex-wrap:wrap;
+}
+main .box2 a{
+    box-sizing: border-box;
+    border: 1px solid black;
+    display:flex;
+    width:25%;
+    height:90px;
+    text-align: center;
+    font-size: 26px;
+    text-decoration: none;
+    flex-direction:column;
+    justify-content:center;
+
+}
+main .box2 a i{
+    display:block;
+    font-size:26px;
+}
+main .box2 a span{
+    font-size: 12px;
+    color:black;
+}
+footer{
+    
+    width:100%;
+    height:50px;
+    background:#FFFFFF;
+    border-top:1px solid #E6E6E6;
+}
+footer ul{
+    list-style: none;
+    height:50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+footer ul li{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    text-align: center;
+    /*line-height: 50px;*/
+    
+}
+
