@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    <style type="text/css">
+         *{margin: 0;padding: 0;}
+        ul,li{list-style: none;}
+        a{text-decoration: none;}
+        .box{
+            width: 800px;
+            /*height: 200px;*/
+            border:10px solid #ccc;
+            overflow: hidden;
+        }
+        .box ul{
+            list-style: none;
+            width: 200%;
+            /*height: 100px;*/
+        }
+        .box ul li{
+            /*200%/16=12.5%*/
+            /*width:100%; 此时是ul的宽度*/
+            /*width:100%/16*/
+            /*浮动li后的父元素ul不能去掉高度。即不会高度塌陷*/
+            float: left;
+            width:6.25%;
+            /*height: 100px;*/
+            list-style: none;
+        }
+        
+            width:100%;
+            height: 100px;
+            /*display: block;*/
+            vertical-align: bottom;
+            /*因为img默认是按基线(baseline)对齐的。对比一下图片和右边的p, q, y等字母，你会发现这三个字母的“小尾巴”和图片下方的空白一样高。下面这张图中的黑线就是那条基线。
+要去掉空格可以使用vertical-align: bottom或将img标签变为块级元素。
+至于什么是基线，还记得四线三格的英语写字本么？中间第三条线就是基线。*/
+        .box li img{
+            
+        }
+
+    </style>
+    </head>
+    <body>
+        <div class="box">
+            <ul>
+                <!-- 快捷键li*16>img[src:""]{添加内容} -->
+                <li><img src="../images/36.jpg" alt="" /></li>
+                <li><img src="../images/36.jpg" alt="" /></li>
+                <li><img src="../images/36.jpg" alt="" /></li>
+                <li><img src="../images/36.jpg" alt="" /></li>
+                <li><img src="../images/36.jpg" alt="" /></li>
+                <li><img src="../images/36.jpg" alt="" /></li>
+                <li><img src="../images/36.jpg" alt="" /></li>
+                <li><img src="../images/36.jpg" alt="" /></li>
+                <li><img src="../images/36.jpg" alt="" /></li>
+                <li><img src="../images/36.jpg" alt="" /></li>
+                <li><img src="../images/36.jpg" alt="" /></li>
+                <li><img src="../images/36.jpg" alt="" /></li>
+                <li><img src="../images/36.jpg" alt="" /></li>
+                <li><img src="../images/36.jpg" alt="" /></li>
+                <li><img src="../images/36.jpg" alt="" /></li>
+                <li><img src="../images/36.jpg" alt="" /></li>
+            </ul>
+        </div>
+        <div>
+        <!-- 图片与父元素高度不一致 -->
+            <img src="../images/36.jpg" alt="" />
+        </div>
+    </body>
+</html>

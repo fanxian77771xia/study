@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    <style type="text/css">
+        *{margin:0px; padding:0px;}
+        .box{
+            background:red;
+        }
+        .son{
+            width:200px;
+            background:green;
+            height:40px;
+            /*当父元素宽度确定，子元素不存在浮动，绝对定位，固定定位时，其宽度也能够很好的继承；相反，宽度会零（只有通过里面的内容把其撑开）。*/
+            /*内层子元素必须为块级元素，才有可能出现宽度继承*/
+            float:left;
+        }
+        .clear{
+            height:0;
+            clear:both;
+            overflow: hidden;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="son">
+                
+            </div>
+            <div class="clear">
+                
+            </div>
+        </div>
+    </body>
+</html>

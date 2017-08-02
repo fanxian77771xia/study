@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    <style type="text/css">
+    *{
+        margin:0px; padding:0px;
+    }
+    .box{
+        background:red;
+    }
+    .son{
+        width:200px;
+        height:200px;
+        float:left;
+        background:green;
+    }
+    /*万能清楚浮动的方法*/
+    .clearfix:after{
+        content:"";
+        display: block;
+        height:0px;
+        clear:both;
+        overflow:hidden;
+        visibility: hidden;
+        zoom: 1;
+    }
+    </style>
+    </head>
+    <body>
+        <div class="box clearfix">
+            <div class="son">
+                
+            </div>
+        </div>
+    </body>
+</html>
+<!-- .clearfix:after{
+    content:"";
+    display:block;
+    height:0;
+    clear:both;
+    overflow:hidden;
+    visibility:hidden;
+    zoom:1;
+} -->

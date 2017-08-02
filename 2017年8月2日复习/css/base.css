@@ -1,0 +1,11 @@
+/* 
+* @Author: Marte
+* @Date:   2017-07-25 16:15:35
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-08-02 14:31:01
+*/
+body,h2,h3,h4,h5,h6,p,ul,ol,li,dd,dl,dt i figure{margin:0 auto ;padding: 0;}
+ul li{list-style: none;}
+a{text-decoration: none;}
+.container{width:1263px;margin:0 auto;}
+.clearfix::after{content:""; overflow:hidden;height:0;visibility:hidden;clear:both;zoom:1;display:block;}
