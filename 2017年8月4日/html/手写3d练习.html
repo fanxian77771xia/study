@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    <style type="text/css">
+        .box{
+            width:200px;
+            height:200px;
+            margin: 150px auto;
+            transform-style: preserve-3d;
+            position:relative;
+            perspective:1000px;
+            perspective-origin: -400px -1000px;
+        }
+        .box div{
+            position:absolute;
+            top:0;
+            left:0;
+            width:200px;
+            height:200px;
+
+        }
+        .box div:nth-child(1){
+            
+            background:green;
+            transform:translate3d(100px,0,100px) rotateY(30deg);
+            
+        }
+        .box div:nth-child(2){
+            
+            background:pink;
+            transform:translate3d(200px,0,0) rotateY(90deg);
+            
+        }
+        .box div:nth-child(3){
+            
+            background:blue;
+            transform:translate3d(100px,0,-100px) rotateY(-30deg);
+            
+        }
+        .box div:nth-child(4){
+            
+            background:yellow;
+            transform:translate3d(-100px,0,-100px) rotateY(30deg);
+            
+        }
+         .box div:nth-child(5){
+            
+            background:black;
+            transform:translate3d(-200px,0,0) rotateY(-90deg);
+            
+        }
+        .box div:nth-child(6){
+            
+            background:purple;
+            transform:translate3d(-100px,0,100px) rotateY(-30deg);
+            
+        }
+        .box div:nth-child(7){
+            
+            background:red;
+            transform:translate3d(0,0,0) rotateY(0deg);
+            
+        }
+    </style>
+    </head>
+    <body>
+        <div class="box">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+        </div>
+    </body>
+</html>

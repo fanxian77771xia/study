@@ -1,0 +1,117 @@
+<style>
+*{margin:0;padding:0;}
+ .box{
+width:800px;
+margin:150px auto;
+display:flex;
+border:1px solid black;
+}
+.box p{
+width:50%;
+}
+.box p:first-child{
+background:red;
+}
+.box p:last-child{
+align-self:center;
+background:grey;
+}
+</style>
+<body>
+  <div class="box">
+    <p>
+    父元素宽800px；子元素宽度各占父元素宽度一半，高度由内容决定，利用flex做出如图效果。父元素宽800px；子元素宽度各占父元素宽度一半，高度由内容决定，利用flex做出如图效果。父元素宽800px；子元素宽度各占父元素宽度一半，高度由内容决定，利用flex做出如图效果。父元素宽800px；子元素宽度各占父元素宽度一半，高度由内容决定，利用flex做出如图效果。父元素宽800px；子元素宽度各占父元素宽度一半，高度由内容决定，利用flex做出如图效果。父元素宽800px；子元素宽度各占父元素宽度一半，高度由内容决定，利用flex做出如图效果。父元素宽800px；子元素宽度各占父元素宽度一半，高度由内容决定，利用flex做出如图效果。
+    </p>
+    <p>
+    父元素宽800px；子元素宽度各占父元素宽度一半，高度由内容决定，利用flex做出如图效果。父元素宽800px；子元素宽度各占父元素宽度一半，高度由内容决定，利用flex做出如图效果。
+    </p>
+  </div>
+</body>
+
+
+
+
+第二题
+<style>
+*{margin:0;padding:0;}
+table{
+
+border:1px solid black;
+cellspacing:0px;
+border-collapse:collapse;
+}
+table tr:nth-child(1){
+background:blue;
+color:white;
+}
+</style>
+<body>
+<table>
+  <tr><td colspan="4">成绩表</td></tr>
+  <tr><td rowspan="2">王五一</td><td>语文</td><td>数学</td><td>英语</td></tr>
+  <tr><td>90</td><td>100</td><td>95</td></tr>
+</table>
+</body>
+
+
+
+第三题
+<style>
+*{margin:0;padding:0;}
+.box{
+width:800px;
+height:800px;
+margin:150px auto;
+display:flex;
+flex-direction:column;
+
+}
+.box div{
+    height:25%;
+    box-sizing: border-box;
+    border:1px solid black;
+}
+</style>
+<body>
+<div class="box">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+</body>
+
+
+
+第四题
+<style>
+*{margin:0px;padding:0px;}
+html,body{
+height:100%;
+}
+.top{height:80px;
+margin-bottom:10px;
+background:red;
+}
+.main{
+height:100%;
+}
+.main first-child{
+width:150px;
+height:100%;
+float:left;
+background:red;
+}
+.main last-child{
+height:100%
+margin-left:10px;
+background:red;
+}
+</style>
+<body>
+  <div class="top"></div>
+  <div class="main">
+	<div></div>
+	<div></div>
+  </div>
+</body>

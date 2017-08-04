@@ -1,0 +1,16 @@
+/* 
+* @Author: Marte
+* @Date:   2017-08-04 08:59:50
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-08-04 10:26:03
+*/
+
+ p{
+    width: 524px;
+    height:0px;
+    overflow-y:auto;
+    transition:all 2s ;
+}
+p:target{
+    height:153px;
+}

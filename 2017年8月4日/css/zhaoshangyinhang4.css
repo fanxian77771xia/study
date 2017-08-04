@@ -1,0 +1,45 @@
+/* 
+* @Author: Marte
+* @Date:   2017-08-04 17:57:32
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-08-04 18:23:29
+*/
+html,body{
+    height:100%;
+}
+#container{
+    height:100%;
+    display:flex;
+    flex-direction: column;
+}
+header{
+    height:63px;
+    background: #ffffff;
+    position:relative;
+}
+header i{
+    display:block;
+    width:29px;
+    height:29px;
+    background:url(../images/jingling.fw.png) no-repeat -184px 0;
+    position: absolute;
+    top:23px;
+    right:8px;
+}
+header span{
+    display:block;
+    width:50px;
+    margin:0 auto;
+    margin-top: 32px;
+    font-size: 15px;
+    text-align: center;
+}
+main{
+    flex:1;
+    background:#EAEAEA;
+}
+main a{
+    display:block;
+    box-sizing: border-box;
+    padding-left: 56px;
+}
