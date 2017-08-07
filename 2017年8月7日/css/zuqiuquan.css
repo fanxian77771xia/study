@@ -1,0 +1,125 @@
+/* 
+* @Author: Marte
+* @Date:   2017-08-07 11:51:12
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-08-07 21:24:15
+*/
+body,html{
+    height:100%;
+}
+#container{
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#container header{
+    height:45px;
+    background:#0cc440;
+}
+#container header ul{
+    height:44px;
+    display:flex;
+    justify-content: space-between;
+}
+#container header ul li:first-child,
+#container header ul li:last-child{
+    width:40px;
+    text-align: center;
+    line-height: 44px;
+}
+#container header ul li:nth-child(2){
+    display:flex;
+    align-items: center;
+}
+#container header ul li:nth-child(2) span{
+    display:block;
+    width:60px;
+    height:24px;
+    text-align: center;
+    line-height:24px;
+    background: #3DD066;
+    color:#8BFBA9;
+}
+#container header ul li:nth-child(2) span:first-child{
+    border-radius: 12px 0 0 12px;
+}
+#container header ul li:nth-child(2) span:last-child{
+    border-radius: 0 12px 12px 0;
+}
+#container header ul li i{
+    font-size: 20px;
+    color: rgba(255,255,255, 0.5);
+}
+#container nav{
+    height:35px;
+    background:#ccc;
+}
+#container nav ul{
+    height:35px;
+    display:flex;
+    justify-content: space-between;
+}
+#container nav ul li{
+    flex:1;
+    text-align: center;
+    line-height: 35px;
+}
+#container nav ul li.active{
+    border-bottom: 3px solid #0EC044;
+}
+#container section{
+    flex:1;
+    overflow-y: auto;
+}
+#container section ul{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#container section ul li{
+    width:49%;
+    border:1px solid black;
+    margin:5px 0;
+}
+#container section ul li img{
+    width:100%;
+}
+#container footer{
+    
+    background:#ccc;
+}
+#container footer ul{
+    height:44px;
+    display:flex;
+    justify-content: space-between;
+
+}
+#container footer ul li{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+}
+#container footer ul li i{
+    font-size: 20px;
+}
+#container footer ul li:nth-child(3) {
+    position:relative;
+   
+}
+#container footer ul li:nth-child(3) i{
+    position:absolute;
+    top:-9px;
+    left:50%;
+    transform:translate(-50%, 0);
+    width:53px;
+    height:53px;
+    border:1px solid black;
+    border-radius: 50%;
+    line-height: 48px;
+    font-size: 27px;
+    background: #fff;
+}

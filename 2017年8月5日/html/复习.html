@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+        ul{
+            list-style-type:square ;
+            list-style-image: url(../images/IMG_0946.fw.png);
+            /*默认数值inside，outside表示图片（符号）在ul的padding-left里，inside表示图片（符号）在li的内容里*/
+            list-style-position:inside;
+        }
+        .border{
+            border-width:20px;
+            /*边框样式solid实线,dashed虚线,dotted点状线,double双线，none没有边框*/
+            border-style:double;
+            border-color:red;
+            /*单独设置每个方向的边框*/
+           /* border-top border-left border-bottom border-right*/
+        }
+        .background{
+            width:401px;
+            height:529px;
+            /*以下两个属性如果都写了，背景图会覆盖背景颜色*/
+            background-color: red;
+            background-image:url(../images/1.png);
+            /*平铺属性*/
+            /*属性值：repeat平铺 no-repeat不平铺 repeat-y y轴平铺 repeat-x x轴平铺*/
+            background-repeat: no-repeat;
+            /*背景位置*/
+            background-position: -100px;
+            /*背景固定*/
+            background-attachment:fixed;
+        }
+        </style>
+    </head>
+    <body>
+        <!-- 列表属性 -->
+        <ul>
+            <li>级</li>
+            <li>圣诞</li>
+            <li>沸点</li>
+            <li>自学</li>
+        </ul>
+         <!-- 列表属性 -->
+        <!-- border -->
+        <div class="border">边框</div>
+        <!-- border -->
+        <!-- 背景 -->
+        <div class="background">
+            
+        </div>
+        <!-- 背景 -->
+    </body>
+</html>

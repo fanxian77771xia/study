@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        ul,li{list-style: none;}
+        a{text-decoration: none;}
+        .tab{
+            width:500px;
+            height:40px;
+            border-bottom:20px solid red;
+            margin:100px auto;
+            padding-left: 40px;
+        }
+        .tab li{
+            float:left;
+            margin-top:4px;
+            margin-right: 1px;
+        }
+        .tab li a{
+            display:block;
+            padding:0 14px;
+            height:36px;
+            
+            
+            background:grey;
+            line-height: 36px;
+        }
+      
+         .tab li a:last-child{
+            display:none;
+        }
+        .tab li:hover{
+            margin-top:0px;
+        }
+        .tab li:hover a{
+            
+            height:40px;
+            background:red;
+            line-height: 40px;
+        }
+        .tab li:hover a:first-child{
+            display:none;
+        }
+        .tab li:hover a:last-child{
+            display:block;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="box">
+            <ul class="tab">
+                <li><a href="#">首页</a><a href="#">你好</a></li>
+                <li><a href="#">首页</a><a href="#">你好</a></li>
+                <li><a href="#">首页</a><a href="#">你好</a></li>
+                <li><a href="#">首页</a><a href="#">你好</a></li>
+                <li><a href="#">首页</a><a href="#">你好</a></li>
+            </ul>
+        </div>
+    </body>
+</html>
