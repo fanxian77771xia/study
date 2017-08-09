@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <input type="text" id="height" value="" placeholder="身高(m)"/>
+        <input type="text" id="weight" value="" placeholder="体重(kg)"/><button onclick="pingding()">测试</button>
+        <div id="jieguo"></div>
+        <script type="text/javascript">
+            var height = document.getElementById("height")
+            var weight = document.getElementById("weight");
+            function pingding(){
+                var _weight = Number(weight.value);
+                var _height = Number(height.value);
+                if(_weight/(_height*_height)<18.5){
+                    jieguo.innerHTML="过轻";
+                }else if(_weight/(_height*_height)<24.9){
+                    jieguo.innerHTML="正常";
+                }else if(_weight/(_height*_height)<28){
+                    jieguo.innerHTML="过重";
+                }else if(_weight/(_height*_height)<32){
+                    jieguo.innerHTML="肥胖";
+                }else{
+                    jieguo.innerHTML="非常肥胖";
+                }
+            }
+        </script>
+    </body>
+</html>

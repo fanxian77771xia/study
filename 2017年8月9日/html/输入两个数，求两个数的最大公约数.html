@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <input type="text" id="common divisor1" value=""/>
+        <input type="text" id="common divisor2" value=""/>
+        <button onclick="command()">求最大公约数</button>
+        <div id="result"></div>
+        <script type="text/javascript">
+            var common_divisor1= document.getElementById("common divisor1");
+            var common_divisor2= document.getElementById("common divisor2");
+            var result= document.getElementById("result")
+            function  command(){
+            var _common_divisor1= Number(common_divisor1.value);
+            var _common_divisor2= Number(common_divisor2.value);
+                if( _common_divisor1<_common_divisor2){
+                    var min = _common_divisor1;
+                    var max = _common_divisor2;
+                }else{
+                    var min = _common_divisor2;
+                    var max = _common_divisor1;
+                }
+                for(i=min;i>0;i--){
+                        if(min%i==0  &&  max%i==0){
+                            break;
+                        }
+
+                }
+                result.innerHTML="最大公约数是"+i;
+            }
+        </script>
+    </body>
+</html>

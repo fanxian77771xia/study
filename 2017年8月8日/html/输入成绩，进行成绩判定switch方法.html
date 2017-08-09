@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <input type="text" id="chengji" value="" /><button onclick="pingding()">提交</button>
+        <div id="jieguo"></div>
+        <script type="text/javascript">
+           var chengji = document.getElementById("chengji");
+           var jieguo = document.getElementById("jieguo");
+           function pingding(){
+              var _chengji = Number(chengji.value);
+              switch(true){
+
+                    case _chengji>=85:
+                    jieguo.innerHTML="优秀";
+                    break;
+                    case _chengji>75:
+                    jieguo.innerHTML="良好";
+                    break;
+                    case _chengji>60:
+                    jieguo.innerHTML="及格";
+                    break;
+                    default:jieguo.innerHTML="不及格";
+              }
+           }
+        </script>
+    </body>
+</html>

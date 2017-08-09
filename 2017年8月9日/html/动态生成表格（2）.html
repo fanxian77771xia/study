@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    <style type="text/css">
+    /*如果用document.write无法添加样式*/
+        td{background:#ccc;}
+    </style>
+    </head>
+    <body>
+        <input type="text" id="rows" />
+        <input type="text" id="cols"/>
+        <button onclick="shengchen()">提交</button>
+        <div id="biao"></div>
+        <script type="text/javascript">
+        var rows = document.getElementById("rows");
+        var cols = document.getElementById("cols");
+        var biao = document.getElementById("biao");
+        function  shengchen(){
+            var _rows = Number(rows.value);
+            var _cols = Number(cols.value);
+            var str='';
+            
+                for (var i = 0; i <_rows; i++) {
+                       str+="<tr>"     
+                        for(var j=0; j<_cols; j++){
+                             str+="<td>单元格</td>"
+                        } 
+                         str+="</tr>"
+                    };
+                    console.log(str);
+              biao.innerHTML='<table border="1">'+str+"</table>";
+            // document.getElementsByTagName('table')[0].style.background="red";
+
+            }
+
+        </script>
+    </body>
+</html>

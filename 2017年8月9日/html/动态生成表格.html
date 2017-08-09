@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+                    <style type="text/css">
+    td{
+        width:20px;
+        height:10px;
+        border:1px solid black;
+    }
+    table{
+        background: red;
+    }
+    
+    </style>
+    </head>
+    <body>
+        <input type="text" id="rows" />
+        <input type="text" id="cols"/>
+        <button onclick="shengchen()">提交</button>
+        <script type="text/javascript">
+        var rows = document.getElementById("rows");
+        var cols = document.getElementById("cols");
+        function  shengchen(){
+            var _rows = Number(rows.value);
+            var _cols = Number(cols.value);
+            document.write("<table>")
+                for (var i = 0; i <_rows; i++) {
+                        document.write("<tr>")       
+                        for(var j=0; j<_cols; j++){
+                            document.write("<td>"+"单元格"+"</td>")
+                        } 
+                        document.write("</tr>") 
+                    };
+            document.write("</table>")
+            document.getElementsByTagName('table')[0].style.background="red";
+
+            }
+
+        </script>
+    </body>
+</html>

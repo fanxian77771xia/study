@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+        <script type="text/javascript">
+            var xinshui = 10000;
+            var total = 0;
+            for(i=1;i<=10;i++){
+                total = total + xinshui * 12;
+                xinshui = xinshui + xinshui*0.05;
+
+            }
+
+            document.write("小王10年后薪水" + xinshui + "元" + "小王这10年赚了" + total + "元")
+        </script>
+    </body>
+</html>

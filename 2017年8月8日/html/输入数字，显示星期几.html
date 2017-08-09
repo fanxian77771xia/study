@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <input type="text" id="xingqi" value="" /><button onclick="show()">提交</button>
+        <div id="jieguo"></div>
+        <script type="text/javascript">
+            var xingqi = document.getElementById("xingqi");
+
+            function show(){
+                var _xingqi=Number(xingqi.value);
+                switch(_xingqi%7){
+                    case 1:jieguo.innerHTML="星期一";
+                    break;
+                    case 2:jieguo.innerHTML="星期二";
+                    break;
+                    case 3:jieguo.innerHTML="星期三";
+                    break;
+                    case 4:jieguo.innerHTML="星期四";
+                    break;
+                    case 5:jieguo.innerHTML="星期五";
+                    break;
+                    case 6:jieguo.innerHTML="星期六";
+                    break;
+                    case 0:jieguo.innerHTML="星期日";
+                    break;
+                }
+            }
+        </script>
+    </body>
+</html>

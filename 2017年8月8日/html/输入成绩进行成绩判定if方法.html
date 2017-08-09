@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <input type="text" id="chengji" value="" /><button onclick="panding()">提交</button>
+        <div id="jieguo"></div>
+        <script type="text/javascript">
+            var chengji = document.getElementById("chengji");
+            function panding(){
+                var _chengji = Number(chengji.value);
+                if(_chengji>85){
+                    jieguo.innerHTML = "优秀";
+                }else if(_chengji>=75){
+                    jieguo.innerHTML = "良好";
+                }else if(_chengji>=60){
+                    jieguo.innerHTML = "及格";
+                }else{
+                    jieguo.innerHTML = "不及格";
+                }
+            }
+        </script>
+    </body>
+</html>

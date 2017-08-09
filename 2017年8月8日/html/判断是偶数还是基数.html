@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <input type="text" id="num" value="" /><button onclick="check()">判断奇偶</button>
+        <div id="output"></div>
+        <script type="text/javascript">
+        var num = document.getElementById("num");
+        
+        function check(){
+             var _num =Number(num.value);
+            
+            if(_num%2===0){
+                // alert("偶数");
+                output.innerHTML="偶数";
+            }else{
+                // alert("基数");
+                 output.innerHTML="基数";
+            }
+        }
+        </script>
+    </body>
+</html>

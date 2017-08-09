@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <input type="text" id="month" value="" /><button onclick="showdays()">提交</button>
+        <div id="jieguo"></div>
+        <script type="text/javascript">
+            var month = document.getElementById("month");
+
+            function showdays(){
+                var _month = Number(month.value);
+                switch(_month){
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 10:
+                    case 12:jieguo.innerHTML=_month+"月有31日";
+                    break;
+                    case 2:jieguo.innerHTML=_month+"月有28日";
+                    break;
+                    case 4:
+                    case 6:
+                    case 9:
+                    case 11:jieguo.innerHTML=_month+"月有30日";
+                    break;
+                    default:jieguo.innerHTML="不是合法信息"
+                }
+            }
+        </script>
+    </body>
+</html>
