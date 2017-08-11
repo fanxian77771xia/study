@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <input type="text" id="yuanwen" />
+        <button id="btn">转换</button>
+        <input type="text" id="miwen"/>
+        <script type="text/javascript">
+            var yuanwen = document.getElementById("yuanwen");
+            var miwen = document.getElementById("miwen");
+
+            btn.onclick = function(){
+                var num = Number(yuanwen.value);
+                var qian = parseInt(num/1000);
+                var bai = parseInt(num/100)%10;
+                var shi = parseInt(num/10)%10;
+                var ge = num%10;
+
+                var qian1 = (qian+5)%10;
+                var bai1 = (bai+5)%10;
+                var shi1 = (shi+5)%10;
+                var ge1 = (ge+5)%10;
+
+
+
+                var temp1;
+                temp1 = qian1;
+                qian1 = ge1;
+                ge1 = temp1;
+
+                var temp2;
+                temp2 = bai1;
+                bai1 = shi1;
+                shi1 = temp2;
+
+                var jieguo = qian1*1000+bai1*100+shi1*10+ge1;
+                                
+                if (jieguo<10) {
+                    alert("message");
+                    jieguo="000"+jieguo;
+                }else if(jieguo<100){
+                    jieguo="00"+jieguo;
+                }else if(jieguo<1000){
+                    jieguo="0"+jieguo;
+                };
+                miwen.value=jieguo;
+            }
+        </script>
+    </body>
+</html>

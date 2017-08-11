@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <input type="text" id="num1" />
+        <input type="text" id="num2" />
+        <input type="text" id="num3" />
+        <button id="compare">比较</button>
+        <div id="result"></div>
+        <script type="text/javascript">
+            var num1 = document.getElementById("num1");
+            var num2 = document.getElementById("num2");
+            var num3 = document.getElementById("num3");
+            var compare = document.getElementById("compare");
+            var result = document.getElementById("result");
+
+            compare.onclick = function(){
+                var _num1 = Number(num1.value);
+                var _num2 = Number(num2.value);
+                var _num3 = Number(num3.value);
+                var a = 0;
+                var b;
+                var c;
+                
+                if(_num1>=_num2 && _num1>=_num3){
+                    c = _num1;
+                    if(_num2>=_num3){
+                        a = _num3;
+                        b = _num2;
+                    }else{
+                        a = _num2;
+                        b = _num3;
+                    }
+                }else if(_num1>=_num2 && _num1<=_num3){
+                    a = _num2;
+                    b = _num1;
+                    c = _num3;
+                }else if(_num1>=_num3 && _num1<=_num2){
+                    a = _num3;
+                    b = _num1;
+                    c = _num2;
+                }else if(_num2>_num3){
+                    a = _num1;
+                    b = _num3;
+                    c = _num2;
+                }else if(_num3>_num2){
+                    a = _num1;
+                    b = _num2;
+                    c = _num3;
+                }
+
+                result.innerHTML=a+"<="+b+"<="+c;
+            }
+
+        </script>
+    </body>
+</html>

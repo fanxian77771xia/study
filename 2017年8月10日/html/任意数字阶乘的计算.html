@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <input type="text" id="num" />
+        <button id="btn">计算</button>
+        <div id="jieguo"></div>
+        <script type="text/javascript">
+        var num = document.getElementById("num");
+        var btn = document.getElementById("btn");
+        var jieguo = document.getElementById("jieguo");
+
+        
+        btn.onclick=function(){
+            var total = 1;
+            var _num=Number(num.value);
+            for(i=2;i<=_num;i++){
+                total*=i;
+            }
+            jieguo.innerHTML=total;
+        }
+            
+        </script>
+    </body>
+</html>

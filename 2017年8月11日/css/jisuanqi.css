@@ -1,0 +1,61 @@
+/* 
+* @Author: Marte
+* @Date:   2017-08-11 16:11:01
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-08-11 21:18:10
+*/
+*{margin:0px;padding:0px;}
+.box{
+    width:274px;
+    height:207px;
+    padding:15px;
+    margin:150px auto;
+    background: #993399;
+}
+.box input{
+    display: block;
+    width:245px;
+    height:30px;
+    margin:0 auto;
+    text-align: right;
+}
+.box table{
+    display:flex;
+    width:245px;
+    margin:0 auto;
+    margin-top:10px;
+}
+.box table tr{
+    display:flex;
+    margin-bottom: 5px;
+}
+.box table tr td{
+
+    width:60px;
+    height:30px;
+    margin-left: 2px;
+    text-align: center;
+    line-height: 30px;
+    background:#72324C;
+}
+.box table tr th{
+
+    width:60px;
+    height:30px;
+    margin-left: 2px;
+    text-align: center;
+    line-height: 30px;
+    background:#72324C;
+}
+ #division{
+    display:block;
+    width:60px;
+    height:30px;
+    margin-left: 2px;
+    text-align: center;
+    line-height: 30px;
+    background:#72324C;
+}
+.box table tr td:first-child{
+    margin-left: 0px;
+}

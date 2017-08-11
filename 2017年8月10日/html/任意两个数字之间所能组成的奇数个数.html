@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <input type="text" id="num1" />
+        <input type="text" id="num2" />
+        <button id="count">计算</button>
+        <div id="result"></div>
+        <script type="text/javascript">
+            var num1 = document.getElementById("num1");
+            var num2 = document.getElementById("num2");
+                
+            count.onclick = function(){
+
+                var _num1 = Number(num1.value);
+                var _num2 = Number(num2.value);
+                
+                
+                if(_num1>_num2){
+                    _max = _num1;
+                    _min = _num2;
+                }else{
+                    _max = _num2;
+                    _min = _num1;
+                }
+                
+                    
+                    var total1 = "";
+                    var total2 = 0;
+                for(i=_min;i<=_max;i++){
+                    for(j=_min;j<=_max;j++){
+                        var str='';
+                        var num=0;
+                        
+                        if(i!=j){
+                            str = i+''+j;
+                            num = Number(str);
+                        }
+
+                        if(num%2!==0){
+                            total1+=str+',';
+                            total2+=1;
+                        }
+                    
+                    }
+                }
+                result.innerHTML=total1+"总共"+total2+"个";
+                
+                
+                
+            }
+        </script>
+    </body>
+</html>

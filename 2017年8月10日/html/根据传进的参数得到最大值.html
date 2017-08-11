@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+        <script type="text/javascript">
+        var num = document.getElementById("num");
+        var count = document.getElementById("count");
+        
+        function sum(){
+            
+            for(i=0;i<arguments.length;i++){
+                var max;
+                if(arguments[i]>arguments[i-1]){
+                    max = arguments[i];
+                }
+                console.log(max);
+            }
+            
+        }
+        sum(9,9,123,31,4124,436,1,11111);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+        div{
+            width:400px;
+            height:400px;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="result"></div>
+        <button id="color">随机颜色</button>
+        <script type="text/javascript">
+            var result = document.getElementById("result");
+            var color = document.getElementById("color");
+
+            color.onclick = function(){
+                var num1 = parseInt(Math.random()*255+1);
+                var num2 = parseInt(Math.random()*255+1);
+                var num3 = parseInt(Math.random()*255+1);
+                
+
+                result.style.backgroundColor='rgb('+num1+","+num2+","+num3+")";
+                
+            }
+        </script>
+    </body>
+</html>

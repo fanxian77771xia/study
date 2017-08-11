@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <input type="text" id="pingfang" />
+    <button id="count1">计算</button>
+    <div id="result1"></div>
+    <input type="text" id="lifang"/>
+    <button id="count2">计算</button>
+    <div id="result2"></div>
+    <script type="text/javascript">
+    var pingfang = document.getElementById("pingfang");
+    var lifang = document.getElementById("lifang");
+    var result1 = document.getElementById("result1");
+    var result2 = document.getElementById("result2");
+
+    count1.onclick = function(){
+        var total1 = 1;
+        var _pingfang = Number(pingfang.value);
+        total1*=_pingfang*_pingfang;
+        result1.innerHTML=total1;
+    }
+    count2.onclick = function(){
+        var total2 = 1;
+        var _lifang = Number(lifang.value);
+        total2*=_lifang*_lifang*_lifang;
+        result2.innerHTML=total2;
+    }
+    </script>
+    </body>
+</html>

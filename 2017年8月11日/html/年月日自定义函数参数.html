@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+                
+                    function panduan(year,month,day){
+                        if(month<=12 && month >=1){
+                            switch(month){
+                                case 1:
+                                case 3:
+                                case 5:
+                                case 7:
+                                case 8:
+                                case 10:
+                                case 12:if(day>31 || day<1 ){console.log("错误日期:"+year+"-"+month+"-"+day);
+                                        } else  {console.log("正确日期:"+year+"-"+month+"-"+day);}
+                                break;
+                                case 2:if(year%4==0 && year%100!=0 && day>29){
+                                            console.log("错误日期:"+year+"-"+month+"-"+day);
+                                        }else if(year%400==0 && day>29){
+                                            console.log("错误日期:"+year+"-"+month+"-"+day);
+                                        }else if(year%4!=0 && day>28){
+                                            console.log("错误日期:"+year+"-"+month+"-"+day);
+                                        }else  {console.log("正确日期:"+year+"-"+month+"-"+day);}
+                                break;
+                                case 4:
+                                case 6:
+                                case 9:
+                                case 11:if(day>30 || day<1){console.log("错误日期:"+year+"-"+month+"-"+day);
+                                        } else  {console.log("正确日期:"+year+"-"+month+"-"+day);}
+                                break;
+                                default:console.log("正确日期:"+year+"-"+month+"-"+day);
+                            }
+                        }else{
+                            console.log("错误日期:"+year+"-"+month+"-"+day);
+                        }
+                    }
+                    panduan(2014,2,29);    
+
+                 
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <input type="text" id="begin"/>
+        <input type="text" id="end"/>
+        <button id="count">计算</button>
+        <div id="result"></div>
+        <script type="text/javascript">
+            var begin = document.getElementById("begin");
+            var end = document.getElementById("end");
+
+            count.onclick = function(){
+                var _begin = Number(begin.value);
+                var _end = Number(end.value);
+                var num = parseInt(Math.random()*(_end-_begin+1)+_begin,10);
+                result.innerHTML= num;
+            }
+        </script>
+    </body>
+</html>
