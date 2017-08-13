@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+        window.onload = function(){
+            function sum(n){
+                if (n<=1) {
+                    return 1;
+                }
+                return n + sum(n-1);
+            }
+            sum(100);
+            console.log(sum(100));
+
+            function multiple(m){
+                if(m<=1){
+                    return 1;
+                }
+                return m * multiple(m-1);
+            }
+            // multiple(5);
+            console.log(multiple(5));
+        }
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

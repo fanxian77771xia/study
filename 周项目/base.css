@@ -1,0 +1,62 @@
+html,body,h1,h2,h3,h4,h5,p,ul,li,dl,dd,dt{
+	margin: 0;
+	padding: 0;
+}
+body,html{
+	width:100%;
+	height: 100%;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+#header{
+	width: 100%;
+	height: 505px;
+}
+#brand{
+	width: 100%;
+	height: 789px;
+	padding-left:351px;
+	padding-right:140px;	
+}
+#top_sellers{
+	width: 100%;
+	height: 1233px;
+	padding-left:351px;
+	padding-right:140px;
+}
+#footer{
+	width: 100%;
+	height: 291px;
+}
+.contianer{
+	width: 770px;
+}
+.clearfix::after{
+	content: "";
+	height: 0;
+	display: none;
+	clear: both;
+	visibility: hidden;
+	overflow: hidden;
+	zoom: 1;
+}
+/*
+brand版块和top_sellers版块需要使用版心容器container；
+同一给brand和top_sellers一个padding-left:351px;padding-right:140px;
+css统一命名isindex.css
+命名规则：
+<div id="header"></div>
+<div id="banner"></div>
+<div id="brand">
+	<div class="container"></div>
+</div>
+<div id="top_sellers">
+	<div class="container"></div>
+</div>
+<div id="footer"></div>
+
+*/
