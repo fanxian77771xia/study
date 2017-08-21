@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+        window.onload = function(){
+            var zifuchuan = document.getElementById("zifuchuan");
+            var btn = document.getElementById("btn");
+
+
+            function zhuanhuan(str){
+                
+                var arr = str.split("");
+
+                for(i=0;i<arr.length;i++){
+                    var ci = 1;
+                    for(j=i+1;j<arr.length;j++){
+                        if(arr[i]==arr[j]){
+                            arr.splice(j,1);
+                            j-=1;
+                            ci+=1;
+
+                        }
+                    }
+                    document.write(arr[i]+":"+ci+",");
+                }
+            }
+            
+            btn.onclick = function(){
+                var str = zifuchuan.value;
+                zhuanhuan(str);
+            }
+        }
+        
+        </script>
+    </head>
+    <body>
+        <input type="text" id="zifuchuan"/>
+        <button id="btn">统计</button>
+
+    </body>
+</html>

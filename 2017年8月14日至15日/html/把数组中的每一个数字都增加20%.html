@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+        window.onload = function(){
+            var count = document.getElementById("count");
+            var arr =[12,31,53,33,66];
+            var arr2 =[];
+            
+            function map(abc){
+                console.log(abc);
+                for(i=0;i<abc.length;i++){
+                 var temp = abc[i]*1.2;
+                
+                 arr2.push(temp);
+                }
+                document.write(arr2);
+            }
+
+            count.onclick = function (){
+                map(arr);
+            };
+            
+        }
+        </script>
+    </head>
+    <body>
+        <button id="count">计算</button>
+    </body>
+</html>

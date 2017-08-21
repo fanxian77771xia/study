@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+        // 此处已经限制死二维数组的的长度，因此赋值不能超过其长度
+        var arr = [[],[],[],[],[]];
+        var num = 0;
+        var total = 0;
+        for(i=0;i<5;i++){
+            for(j=0;j<5;j++){
+                num+=1;
+                arr[i][j]=num;
+                console.log(arr[i][j]);
+                if(i>j){
+                    total+=num;
+                }
+            }
+        }
+        document.write(arr+"<br>"+total);
+        
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

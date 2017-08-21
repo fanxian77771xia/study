@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            window.onload = function(){
+
+                var psd = document.getElementById("psd");
+                var btnEncode = document.getElementById('btnEncode');
+                var btnDecode = document.getElementById("btnDecode");
+                var output = document.getElementById("output");
+
+                btnEncode.onclick = function(){
+                var _psw = psd.value;
+
+                output.innerHTML = encode(_psw);
+                }
+
+                function encode(str){
+                    // 保存加密后的数据
+                    var res = '';
+
+                    for(var i=0;i<str.length;i++){
+                        res += str.charCodeAt(i) + ',';
+                    }
+
+                    // 删除多余的逗号
+                    res = res.slice(0,-1);
+
+                    return res;
+                }
+
+                function jiemi(str2){
+                    var result = [];
+                    for(i=0;i<str2.length;i++){
+                        result[i] = String.fromCharCode(str2[i]);
+                    }
+                    output.innerHTML=result;
+                }
+
+                btnDecode.onclick = function(){
+                    var _psd = output.innerHTML;
+                    var arr = _psd.split(",");
+                    jiemi(arr);
+                }
+            }
+        </script>
+    </head>
+    <body>
+    <input type="text" id="psd"/>
+    <button id="btnEncode">加密</button>
+    <button id="btnDecode">解密</button>
+    <div id="output"></div>
+    </body>
+</html>

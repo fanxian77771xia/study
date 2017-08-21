@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            div{
+                width:400px;
+                height:400px;
+                border:1px solid black;
+                position:absolute;
+            }
+            h4{
+                border-bottom:1px solid black;
+            }
+            button{
+                position:absolute;
+                right:0;
+                top:0;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = function(){
+                var box = document.getElementById("box");
+                var btn = document.getElementById("btn");
+
+                box.style.top = (window.innerHeight - box.offsetHeight)/2 + "px";
+                box.style.left = (window.innerWidth - box.offsetWidth)/2 + "px";
+
+                window.onresize = function(){
+                    box.style.top = (window.innerHeight - box.offsetHeight)/2 + "px";
+                    box.style.left = (window.innerWidth - box.offsetWidth)/2 + "px";
+
+                }
+
+                btn.onclick = function(){
+                    box.style.display = "none";
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <div id="box">
+            <h4>弹窗标题</h4>
+            <p>弹窗内容</p>
+            <button id="btn">&times;</button>
+        </div>
+    </body>
+</html>

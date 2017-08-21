@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            window.onload = function(){
+                var btn = document.getElementById("btn");
+
+                var good = {
+                    id:'g01',
+                    title:'土豪金版iphone7 plus',
+                    price:998,
+                    imgrul:'img/g01.jpg'
+                }
+                btn.onclick = function(){
+                    var params = "";
+                    for(var attr in good){
+                        params+=attr + ":" + good[attr] + "&";
+                    }
+                    params = params.slice(0,-1);
+                    location.href = "details.html?"+ params;
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <img src="../images/g01.jpg" height="320" width="320" alt="" id="btn"/>
+    </body>
+</html>

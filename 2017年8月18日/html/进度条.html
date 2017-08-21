@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            window.onload = function(){
+                var btn = document.getElementById("btn");
+                var jindu = document.getElementById("jindu");
+                var percent = document.getElementById("percent");
+                var i = 0;
+                function jiazai(){
+                    var timer = setInterval(function(){
+                        if(i>=100){
+                            clearInterval(timer);
+                            return;
+                        }
+                        i++;
+                        jindu.style.width = i+"%";
+                        percent.innerHTML = i +"%";
+                    },20)
+                        
+                          
+                }
+                btn.onclick = function(){
+                    jiazai();
+                }
+            }
+        </script>
+        <style type="text/css">
+            #jindu{
+                width:0;
+                height:20px;
+                background:#58bc58;
+                position:relative;
+            }
+            #percent{
+                position:absolute;
+                left:50%;
+                transform:translate(-50%,0);
+            }
+        </style>
+    </head>
+    <body>
+        <button id="btn">加载</button>
+        <div id="jindu"><span id="percent"></span></div>
+    </body>
+</html>

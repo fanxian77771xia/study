@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script type="text/javascript">
+        window.onload = function(){
+            var goodslist = [
+                {   no:"1",
+                    img:"img/libiao1.fw.png",
+                    content:"Decent Module Case,Silicone Skin Cover for iphone",
+                    listprice:"USD 219",
+                    ourprice:"USD 189",
+                    save:"save USD 30",
+                },
+                {   
+                    no:"2",
+                    img:"img/libiao2.fw.png",
+                    content:"Decent Module Case,Silicone Skin Cover for iphone",
+                    listprice:"USD 219",
+                    ourprice:"USD 289",
+                    save:"save USD 30",
+                },
+                {   
+                    no:"3",
+                    img:"img/libiao3.fw.png",
+                    content:"Decent Module Case,Silicone Skin Cover for iphone",
+                    listprice:"USD 219",
+                    ourprice:"USD 180",
+                    save:"save USD 30",
+                },
+               {    
+                    no:"4",
+                    img:"img/libiao4.fw.png",
+                    content:"Decent Module Case,Silicone Skin Cover for iphone",
+                    listprice:"USD 219",
+                    ourprice:"USD 98",
+                    save:"save USD 30",
+                },
+                {   
+                    no:"5",
+                    img:"img/libiao5.fw.png",
+                    content:"Decent Module Case,Silicone Skin Cover for iphone",
+                    listprice:"USD 219",
+                    ourprice:"USD 18",
+                    save:"save USD 30",
+                },
+                {   
+                    no:"6",
+                    img:"img/libiao7.fw.png",
+                    content:"Decent Module Case,Silicone Skin Cover for iphone",
+                    listprice:"USD 219",
+                    ourprice:"USD 19",
+                    save:"save USD 30",
+                },
+                {   
+                    no:"7",
+                    img:"img/libiao8.fw.png",
+                    content:"Decent Module Case,Silicone Skin Cover for iphone",
+                    listprice:"USD 219",
+                    ourprice:"USD 89",
+                    save:"save USD 30",
+                },
+                {   
+                    no:"8",
+                    img:"img/libiao1.fw.png",
+                    content:"Decent Module Case,Silicone Skin Cover for iphone",
+                    listprice:"USD 219",
+                    ourprice:"USD 211",
+                    save:"save USD 30",
+                },
+                {   
+                    no:"9",
+                    img:"img/libiao2.fw.png",
+                    content:"Decent Module Case,Silicone Skin Cover for iphone",
+                    listprice:"USD 219",
+                    ourprice:"USD 300",
+                    save:"save USD 30",
+                },
+                {   
+                    no:"10",
+                    img:"img/libiao3.fw.png",
+                    content:"Decent Module Case,Silicone Skin Cover for iphone",
+                    listprice:"USD 219",
+                    ourprice:"USD 489",
+                    save:"save USD 30",
+                },
+                {   
+                    no:"11",
+                    img:"img/libiao4.fw.png",
+                    content:"Decent Module Case,Silicone Skin Cover for iphone",
+                    listprice:"USD 219",
+                    ourprice:"USD 1189",
+                    save:"save USD 30",
+                },
+                {   
+                    no:"12",
+                    img:"img/libiao6.fw.png",
+                    content:"Decent Module Case,Silicone Skin Cover for iphone",
+                    listprice:"USD 219",
+                    ourprice:"USD 1889",
+                    save:"save USD 30",
+                },
+                {   
+                    no:"13",
+                    img:"img/libiao5.fw.png",
+                    content:"Decent Module Case,Silicone Skin Cover for iphone",
+                    listprice:"USD 219",
+                    ourprice:"USD 1890",
+                    save:"save USD 30",
+                },
+                {   
+                    no:"14",
+                    img:"img/libiao7.fw.png",
+                    content:"Decent Module Case,Silicone Skin Cover for iphone",
+                    listprice:"USD 219",
+                    ourprice:"USD 1808",
+                    save:"save USD 30",
+                },
+                {   
+                    no:"15",
+                    img:"img/libiao8.fw.png",
+                    content:"Decent Module Case,Silicone Skin Cover for iphone",
+                    listprice:"USD 219",
+                    ourprice:"USD 9",
+                    save:"save USD 30",
+                },
+                {   
+                    no:"16",
+                    img:"img/libiao1.fw.png",
+                    content:"Decent Module Case,Silicone Skin Cover for iphone",
+                    listprice:"USD 219",
+                    ourprice:"USD 1",
+                    save:"save USD 30",
+                },
+                {   
+                    no:"17",
+                    img:"img/libiao1.fw.png",
+                    content:"Decent Module Case,Silicone Skin Cover for iphone",
+                    listprice:"USD 219",
+                    ourprice:"USD 18",
+                    save:"save USD 30",
+                },
+                {   
+                    no:"18",
+                    img:"img/libiao6.fw.png",
+                    content:"Decent Module Case,Silicone Skin Cover for iphone",
+                    listprice:"USD 219",
+                    ourprice:"USD 19",
+                    save:"save USD 30",
+                },
+                ]
+
+            var datalist = document.getElementById('datalist');
+            var html = "<ul>";
+
+            for(var i=0;i<goodslist.length;i++){
+            var goods = goodslist[i];
+            html +='<li><div><img src="'+goods.img+'"></div><p>'+goods.content+'</p><p class="price"><span>'+goods.listprice+'</span>'+goods.ourprice+'</p><p class="save">'+goods.save+'</p></li>';
+            }
+
+            
+            html += '</ul>';
+
+            datalist.innerHTML = html;
+
+            var lii=document.getElementsByTagName("li");
+            for(var i=0;i<lii.length;i++){
+                    lii[i].name = i;
+                    lii[i].onclick=function(){ 
+                                    var params = '';
+                                    for(var attr in goodslist[this.name]){
+                                        var object = goodslist[this.name];
+                                        params += attr + '=' + object[attr] + '&';
+
+                                    }
+                                    
+                                                        
+                                    params = params.slice(0,-1);
+                                    console.log(params);
+                                    location.href="html/details.html?" + params;
+                    }
+            }
+
+            var rank = document.getElementById("rank");
+            // 状态变量
+            var change = 1;
+            console.log(Number(goodslist[1].ourprice.slice(4)))
+            rank.onclick = function(){
+                if(change == 1){
+                    // 从小到大排序
+                    for(j=0;j<goodslist.length;j++){
+                    
+                    
+                        for( l=0;l<goodslist.length-1;l++){
+                            
+                            
+
+                            if(Number(goodslist[l].ourprice.slice(4))>Number(goodslist[l+1].ourprice.slice(4))){
+                               var temp = goodslist[l];
+                               goodslist[l] = goodslist[l+1];
+                               goodslist[l+1] = temp;
+                               // arr.unshift(values)
+                            }
+                        }
+                    }
+                    var html = "<ul>";
+
+                    for(var i=0;i<goodslist.length;i++){
+                        var goods = goodslist[i];
+                        html +='<li><div><img src="'+goods.img+'"></div><p>'+goods.content+'</p><p class="price"><span>'+goods.listprice+'</span>'+goods.ourprice+'</p><p class="save">'+goods.save+'</p></li>';
+                    }
+
+                    
+                    html += '</ul>';
+
+                    datalist.innerHTML = html;
+                    change = 2;
+                }else if(change == 2){
+                    // 从大到小排序
+                    for(j=0;j<goodslist.length;j++){
+                    
+                    
+                        for( l=0;l<goodslist.length-1;l++){
+                            
+                            
+
+                            if(Number(goodslist[l].ourprice.slice(4))<Number(goodslist[l+1].ourprice.slice(4))){
+                               var temp = goodslist[l];
+                               goodslist[l] = goodslist[l+1];
+                               goodslist[l+1] = temp;
+                               // arr.unshift(values)
+                            }
+                        }
+                    }
+                    var html = "<ul>";
+
+                    for(var i=0;i<goodslist.length;i++){
+                        var goods = goodslist[i];
+                        html +='<li><div><img src="'+goods.img+'"></div><p>'+goods.content+'</p><p class="price"><span>'+goods.listprice+'</span>'+goods.ourprice+'</p><p class="save">'+goods.save+'</p></li>';
+                    }
+
+                    
+                    html += '</ul>';
+
+                    datalist.innerHTML = html;
+                    change = 1;
+                }
+                
+                
+            }
+            
+        }
+        </script>
+    </head>
+    <body>
+        <div>
+            <span id="rank">price</span>
+        </div>
+        <div id = "datalist">
+            
+        </div>
+    </body>
+</html>

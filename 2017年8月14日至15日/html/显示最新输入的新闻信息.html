@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+        window.onload = function(){
+            var news = document.getElementById("news");
+            var shuru = document.getElementById("shuru");
+            var add = document.getElementById("add");
+            var temp = [];
+
+            function tianjia(){
+                 temp.unshift(shuru.value);
+                 news.innerHTML="";
+                 shuru.value="";
+                 for(i=0;i<temp.length;i++){
+                    news.innerHTML+="<a href='#'>"+temp[i]+"</a>"+"<br>";
+                 }
+                
+            }
+            add.onclick = function(){
+                tianjia();
+            }
+        }
+
+        </script>
+    </head>
+    <body>
+
+        <div id="news"></div> 
+        <input type="text" id="shuru" placeholder="显示最新信息置顶"/>
+       
+    <button id="add">添加</button>
+    </body>
+</html>

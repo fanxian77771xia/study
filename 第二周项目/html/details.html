@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+        window.onload = function(){
+                var params = location.search;
+                params = decodeURI(params);
+                params = params.slice(1);
+
+                var arr = params.split("&");console.log(arr);
+                var data = {};
+                for(i=0;i<arr.length;i++){
+                    var _arr = arr[i].split("=");
+                    data[_arr[0]] = _arr[1];
+                }
+                console.log(data);
+
+                for( var attr in data){
+                    
+                    document.write(attr + ":" +data[attr] + "<br>");
+                }
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

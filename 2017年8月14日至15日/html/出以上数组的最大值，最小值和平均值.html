@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            window.onload = function(){
+                var arr = [10,2,8,55,32,18,9,11,30,16,19,20];
+                var minidx = 0;
+                var maxidx = 0;
+                var min =  arr[minidx];
+                var max =  arr[maxidx];
+                var total = 0;
+                // for(o=0;o<arr.length;o++){
+                //     total+=Number(arr[o]);
+                //     console.log(arr[o]);
+                //     console.log(total);
+                // }
+
+                // for(i=0;i<arr.length;i++){
+                //     for(j=0;j<arr.length;j++){
+                //         if(arr[i]>arr[i+1]){
+                //             var temp = arr[j];
+                //             arr[j] = arr[j+1];
+                //             arr[j+1] = temp;
+                //         }
+                        
+                //     }
+                // }
+                for(i=0;i<arr.length;i++){
+                    if(arr[i]<min){
+                        min=arr[i];
+                       
+                        minidx=i;
+                        console.log(minidx);
+                    }
+                }
+
+                for(j=0;j<arr.length;j++){
+                    if(arr[j]>max){
+                        max=arr[j];
+                        maxidx=j;
+                    }
+                }
+                for(l=0;l<arr.length;l++){
+                    total+=arr[l];   
+                }
+                var pingjun = total/12;
+                document.write("最大值"+max+"序号"+maxidx+"最小值"+min+"序号"+minidx+"平均值"+pingjun)
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            window.onload = function(){
+                var mm = document.getElementById("mm");
+                var shang = document.getElementById("shang");
+                var xia = document.getElementById("xia");
+
+                var idx = 1;
+                var timer;
+                lbt();
+                mm.onmouseover = function(){
+                    clearInterval(timer);
+                }
+                mm.onmouseout = function(){
+                    lbt();
+                }
+                function lbt(){
+                         timer = setInterval(function(){
+                        idx++;console.log(idx)
+                        if(idx>5){
+
+                            idx = 1;
+
+                        }
+                        mm.src = "../images/g"+idx+".jpg";
+                    },2000)
+                }
+
+                function shangyizhang(){
+
+                }
+                shang.onclick = function(){
+                    if(idx==1){
+                        idx=5;
+                    }else{
+                        idx--;
+                    }
+                     mm.src = "../images/g"+idx+".jpg";
+                     clearInterval(timer);
+                     lbt();
+                }
+                xia.onclick = function(){
+                    if(idx==5){
+                        idx=1;
+                    }else{
+                        idx++;
+                    }
+                     mm.src = "../images/g"+idx+".jpg";
+                     clearInterval(timer);
+                     lbt();
+                }
+            }
+        </script>
+        
+    </head>
+    <body>
+        <div>
+            <img src="../images/g1.jpg" height="320" width="320" alt="" id="mm"/>
+        </div>
+        <button id="shang">上一张</button>
+        <button id="xia">下一张</button>
+    </body>
+</html>

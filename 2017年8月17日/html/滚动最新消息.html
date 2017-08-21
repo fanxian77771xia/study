@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            window.onload = function(){
+                var add = document.getElementById("add");
+                
+
+                function tianjia(){
+                    var temp = [];
+                     temp.unshift(news.value);
+                     // news.innerHTML="";
+                     news.value="";
+                     for(i=0;i<temp.length;i++){
+                        add.innerHTML+="<a href='#'>"+temp[i]+"</a>"+"<br>";
+                     }
+                    
+                }
+                btn.onclick = function(){
+                    tianjia();
+                }
+
+                function move1(){
+                    
+                    add.style.transform="translate(0,400px)";
+                    add.style.transition="";
+                    move2();
+                }
+                function move2(){
+                    add.style.transition="all 2s";
+                    add.style.transform="translate(0,0)";
+                    move1();
+                }
+                move1();
+                // setInterval(move1,1000);
+
+               
+            }
+        </script>
+        <style type="text/css">
+            #box{
+                float:left;
+                height:400px;
+                width:400px;
+                border:1px solid black;
+                overflow:hidden;
+                
+
+            }
+            #add{
+                transition:all 2s;
+            }
+
+/*            #add{
+                /*width:1764px;*/
+                 animation:mingzi 4s;
+                 animation-direction: reverse;
+                 animation-iteration-count: infinite;
+                 animation-timing-function: linear;}*/
+/*            @keyframes mingzi{
+                0%{}
+                100%{
+                    transform:translateY(400px);
+                
+                }
+            }*/
+        </style>
+    </head>
+    <body>
+        <input type="text" id="news"/>
+        <button id="btn">提交</button>
+        <div id="box">
+            <div id="add">1111111111111</div>
+        </div>
+    </body>
+</html>

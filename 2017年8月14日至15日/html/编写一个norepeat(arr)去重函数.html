@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+        window.onload = function(){
+            var num = document.getElementById("num");
+            var btn = document.getElementById("btn");
+            var result = document.getElementById("result");
+            var abc = [];
+
+            function norepeat(arr){
+                for(i=0;i<arr.length;i++){
+                    for(j=i+1;j<arr.length;j++){
+                        if(arr[i]==arr[j]){
+                            arr.splice(j,1);
+                            j=j-1;
+                        }
+                    }
+                }
+                result.innerHTML=arr;
+            }
+            btn.onclick = function(){
+                abc = num.value;
+                norepeat(abc);
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="num" />
+        <button id="btn">去重复数</button>
+        <div id="result"></div>
+    </body>
+</html>

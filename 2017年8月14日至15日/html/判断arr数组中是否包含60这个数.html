@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+        window.onload = function(){
+            var text = document.getElementById("text");
+            function has(arr){
+                for(i=0;i<arr.length;i++){
+                    if(arr[i]==60){
+                        document.write("该数组含有60");
+
+                    }
+                }
+
+            }
+            var num = [123,213,213,325,,64,74,23,4,60]
+            text.onclick = function(){
+                
+                has(num);
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <button id = "text">测试</button>
+    </body>
+</html>

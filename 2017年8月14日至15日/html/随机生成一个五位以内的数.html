@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            window.onload=function(){
+                var btn = document.getElementById("btn");
+                var result = document.getElementById("result");
+                var num;
+                
+                function produce(){
+                     num = parseInt(Math.random()*100000);
+                    if(num>10000){
+                        var wan = parseInt(num/10000);
+                        var qian = (parseInt(num/1000))%10;
+                        var bai = (parseInt(num/100))%10;
+                        var shi = (parseInt(num/10))%10;
+                        var ge = num%10;
+                        var wei = 5;
+                        result.innerHTML="随机数："+num+"该数是"+wei+"数"+"万位是"+wan+"千位是"+qian+"百位是"+bai+"十位是"+shi+"个位是"+ge
+                    }else if(num>1000){
+                        var qian = (parseInt(num/1000))%10;
+                        var bai = (parseInt(num/100))%10;
+                        var shi = (parseInt(num/10))%10;
+                        var ge = num%10;
+                        var wei = 4;
+                        result.innerHTML="随机数："+num+"该数是"+wei+"数"+"千位是"+qian+"百位是"+bai+"十位是"+shi+"个位是"+ge
+                    }else if(num>100){
+                        var bai = (parseInt(num/100))%10;
+                        var shi = (parseInt(num/10))%10;
+                        var ge = num%10;
+                        var wei = 3;
+                        result.innerHTML="随机数："+num+"该数是"+wei+"数"+"百位是"+bai+"十位是"+shi+"个位是"+ge
+                    }else if(num>10){
+                        var shi = (parseInt(num/10))%10;
+                        var ge = num%10;
+                        var wei = 2;
+                        result.innerHTML="随机数："+num+"该数是"+wei+"数"+"十位是"+shi+"个位是"+ge
+                    }else{
+                        var ge = num%10;
+                        var wei = 1;
+                        result.innerHTML="随机数："+num+"该数是"+wei+"数"+"个位是"+ge
+                    }
+                }
+                btn.onclick = function(){
+                    produce();
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button id="btn">生成随机数</button>
+        <div id="result"></div>
+    </body>
+</html>

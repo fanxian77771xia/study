@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            window.onload = function(){
+                var number = parseInt(Math.random()*100000);
+                var num = String(number);
+                var res = "";
+                var tips = ["个","十","百","千","万"];
+
+
+                for(i=num.length-1;i>0;i--){
+                    res+=tips[i]+"位是"+num[num.length -1 - i];
+                }
+                document.write("随机数是"+num+res);
+
+            }
+            
+        </script>
+        
+    </head>
+    <body>
+    </body>
+</html>

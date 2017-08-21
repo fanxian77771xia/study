@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            window.onload = function(){
+                var result = document.getElementById("result");
+                var btn = document.getElementById("btn");
+                function map(arr){
+                    for(j=0;j<arr.length;j++){
+                        for(i=0;i<arr.length;i++){
+                            if(arr[i]>arr[i-1]){
+                                var temp = arr[i];
+                                arr [i] = arr[i-1];
+                                arr[i-1] = temp;
+                            }
+                        }
+                    }
+                        
+                } 
+                var num=[12,32,543,765,14,57,9] ;
+                btn.onclick = function(){
+                    num.push(result.value);
+                    map(num);
+                    result.value = num;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="result" />
+        <button id="btn">排序</button>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+/* 
+* @Author: Marte
+* @Date:   2017-08-20 13:44:49
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-08-20 17:53:17
+*/
+
+
+*{
+    margin:0;
+    padding:0;
+}
+/*--------------------------数据列表------------------------------------------------------------*/
+ul,li{
+    list-style:none;
+}
+#datalist{
+    width:770px;
+    
+}
+#datalist ul{
+    overflow:hidden;
+    
+}
+#datalist ul li{
+    float:left;
+    width:25%;
+    height:280px;
+    margin-bottom:10px;
+    position:relative;
+}
+#datalist ul li div{
+    width:192px;
+    height:176px;
+    text-align:center;
+    display:table-cell;
+    vertical-align: middle;
+}
+#datalist ul li p{
+    padding-left:12px;
+    font-size:10px;
+}
+#datalist ul li p:first-of-type{
+    text-indent:24px;
+    width:160px;
+    height:33px;
+    /*white-space: nowrap;*/
+    text-overflow: ellipsis;
+    overflow:hidden;
+    /*多行文本显示省略号*/
+    display:-webkit-box; 
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2; 
+
+}
+#datalist ul li p:nth-of-type(2){
+    color:red;
+}
+#datalist ul li p:nth-of-type(2) span{
+    text-decoration:line-through;
+    color:black;
+}
+#datalist ul li:before{
+    display:block;
+    content:"";
+    width:17px;
+    height:17px;
+    background:url(../img/fang.fw.png);
+    position:absolute;
+    top:177px;
+    left:14px;
+}

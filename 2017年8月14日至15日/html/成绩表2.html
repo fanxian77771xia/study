@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+        window.onload = function(){
+
+            var arr = [
+                {   
+                    name:1,
+                    yuwen:105,
+                    shuxue:62,
+                    yingyu:118,
+                    total:285
+                },
+                {   
+                    name:2,
+                    yuwen:89,
+                    shuxue:78,
+                    yingyu:120,
+                    total:287
+                },
+
+                {   
+                    name:3,
+                    yuwen:86,
+                    shuxue:64,
+                    yingyu:80,
+                    total:230
+                },
+                {   
+                    name:4,
+                    yuwen:78,
+                    shuxue:99,
+                    yingyu:91,
+                    total:268
+                },
+                {   
+                    name:5,
+                    yuwen:107.5,
+                    shuxue:97,
+                    yingyu:70,
+                    total:274.5
+                },
+                {   
+                    name:6,
+                    yuwen:112,
+                    shuxue:61,
+                    yingyu:92,
+                    total:265
+                },
+                {   
+                    name:7,
+                    yuwen:101,
+                    shuxue:79,
+                    yingyu:104,
+                    total:284
+                },
+                {   
+                    name:8,
+                    yuwen:71,
+                    shuxue:72,
+                    yingyu:105,
+                    total:248
+                },
+                {   
+                    name:9,
+                    yuwen:56,
+                    shuxue:68,
+                    yingyu:61,
+                    total:185
+                },
+                {   
+                    name:10,
+                    yuwen:98,
+                    shuxue:83,
+                    yingyu:77,
+                    total:258
+                }
+            ];
+           
+            // for(i=0;i<arr.length;i++){
+
+            //     for(j=0;j<arr.length-i;j++){
+                   
+            //         if(arr[j].total>arr[j+1].total){
+            //          console.log(arr[j].total);
+                    
+            //         console.log(arr[j+1].total);
+            //             var temp = arr[j].total;
+            //             arr[j].total = arr[j+1].total;
+            //             arr[j+1].total = temp; 
+
+            //         }
+            //     }
+
+            // }
+
+            console.log(arr.total);
+            for(j=0;j<arr.length;j++){
+                // 此处length要减1不然会出错，因为当i=9时arr[i+1]未定义
+                for( i=0;i<arr.length-1;i++){
+                   
+                    if(arr[i].total>arr[i+1].total){
+                       var temp = arr[i];
+                       arr[i] = arr[i+1];
+                       arr[i+1] = temp;
+                       // arr.unshift(values)
+                    }
+                }
+            }
+            
+             console.log(arr);
+            var paiming = 10;
+            for(k=0;k<arr.length;k++){
+              document.write("学号"+arr[k].name+"总成绩是"+arr[k].total+"排名是第"+paiming+"<br>")
+                paiming-=1;
+            }
+            for(l=0;l<arr.length-1;l++){
+                if(arr[l].yuwen>arr[l+1].yuwen){
+                    var temp2 = arr[l];
+                    arr[l] = arr[l+1];
+                    arr[l+1] = temp2;
+                }
+            }
+            document.write("语文成绩最好是"+arr[arr.length-1].yuwen+"分"+"学号是"+arr[arr.length-1].name+"<br>");
+            for(l=0;l<arr.length-1;l++){
+                if(arr[l].shuxue>arr[l+1].shuxue){
+                    var temp2 = arr[l];
+                    arr[l] = arr[l+1];
+                    arr[l+1] = temp2;
+                }
+            }
+            document.write("数学成绩最好是"+arr[arr.length-1].shuxue+"分"+"学号是"+arr[arr.length-1].name+"<br>");
+            for(l=0;l<arr.length-1;l++){
+                if(arr[l].yingyu>arr[l+1].yingyu){
+                    var temp2 = arr[l];
+                    arr[l] = arr[l+1];
+                    arr[l+1] = temp2;
+                }
+            }
+            document.write("英语成绩最好是"+arr[arr.length-1].yingyu+"分"+"学号是"+arr[arr.length-1].name+"<br>");
+            
+        }
+
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

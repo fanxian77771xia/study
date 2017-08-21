@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <script type="text/javascript">
+                var arr = [arr2];
+                
+                var num = 0;
+                var total = 0;
+                for(i=0;i<5;i++){
+                // 此处声明必须放在循环内否则被覆盖
+                   var arr2 = [];
+                    for(j=0;j<5;j++){
+                        num++;
+                       
+                        arr2[j]=num; 
+                        if(i>j){
+                            total+=num
+                        }
+                        
+                        // console.log(arr2);
+                    }
+                    document.write(arr2+"<br>")
+                    console.log(arr2);
+                    arr[i]=arr2;
+                }
+                console.log(arr);
+                document.write(total);
+            </script>
+    </head>
+    <body>
+    </body>
+</html>

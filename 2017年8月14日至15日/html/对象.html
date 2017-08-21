@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+        // 构建对象的方法
+        // 方法一：字面量（推荐）
+            var obj = {name:"xiaoyao",age:21};
+        // 方法二：构建函数
+            var obj2 = new Object();//空对象
+
+        // 添加属性
+        // 方法一：
+        obj["hobby"] = "打游戏";
+        // 方法二：点语法
+        obj.height = 177;
+        // 同名属性被覆盖
+        obj.hobby = "游泳";
+        // 读取属性值
+        console.log(obj);
+        console.log(obj.name)
+        //循环遍历
+        for(var attr in obj){
+        // attr是自己定义的一个变量，用来装对象中的属性，其中obj[attr]是表示属性值，其中attr不加引号是因为它是变量
+            console.log(attr,obj[attr]);
+        }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

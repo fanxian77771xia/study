@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            window.onload = function(){
+                var mm = document.getElementById("mm");
+                var shang = document.getElementById("shang");
+                var xia = document.getElementById("xia");
+                var j1 = document.getElementById("j1");
+                var j2 = document.getElementById("j2");
+                var j3 = document.getElementById("j3");
+                var j4 = document.getElementById("j4");
+                var j5 = document.getElementById("j5");
+
+                var idx = 1;
+                var timer;
+                
+
+                lbt();
+                mm.onmouseover = function(){
+                    clearInterval(timer);
+                }
+                mm.onmouseout = function(){
+                    lbt();
+                }
+                function lbt(){
+                         timer = setInterval(function(){
+                        idx++;
+                        if(idx>5){
+
+                            idx = 1;
+
+                        }
+                        j1.style.backgroundColor="red";
+                        mm.src = "../images/g"+idx+".jpg";
+                    },2000)
+                }
+
+
+                // shang.onclick = function(){
+                //     if(idx==1){
+                //         idx=5;
+                //     }else{
+                //         idx--;
+                //     }
+                //      mm.src = "../images/g"+idx+".jpg";
+                //      clearInterval(timer);
+                //      lbt();
+                // }
+                // xia.onclick = function(){
+                //     if(idx==5){
+                //         idx=1;
+                //     }else{
+                //         idx++;
+                //     }
+                //      mm.src = "../images/g"+idx+".jpg";
+                //      clearInterval(timer);
+                //      lbt();
+                // }
+                j1.onclick = function(){
+                    idx=1;console.log(idx)
+                    mm.src = "../images/g"+idx+".jpg";
+                    lbt();
+
+                    clearInterval(timer);
+                }
+            }
+        </script>
+        <style type="text/css">
+            span{
+                display:inline-block;
+                width:20px;
+                height:20px;
+                border-radius:50%;
+                background:blue;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img src="../images/g1.jpg" height="320" width="320" alt="" id="mm"/>
+        </div>
+        <span id="j1">1</span>
+        <span id="j2">2</span>
+        <span id="j3">3</span>
+        <span id="j4">4</span>
+        <span id="j5">5</span>
+    </body>
+</html>

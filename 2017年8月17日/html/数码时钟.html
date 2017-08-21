@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+        window.onload = function(){
+          
+
+            shuma();
+
+            setInterval(shuma,1000);
+
+            function shuma(){
+                var now = new Date();
+                var hour = now.getHours();
+                var minute = now.getMinutes();
+                var second = now.getSeconds();
+                if(hour<10){
+                    hour1.src = "../images/0.png";
+                    hour2.src = "../images/" + hour + ".png";
+                }else{
+                    var hour_shi = parseInt(hour/10);
+                    var hour_ge = hour%10;
+                    hour1.src = "../images/" + hour_shi + ".png";
+                    hour2.src = "../images/" + hour_ge + ".png";
+                }
+                if(minute<10){
+                    minute1.src = "../images/0.png";
+                    minuter2.src = "../images/" + minute + ".png";
+                }else{
+                    var minute_shi = parseInt(minute/10);
+                    var minute_ge = minute%10;
+                    minute1.src = "../images/" + minute_shi + ".png";
+                    minute2.src = "../images/" + minute_ge + ".png";
+                }
+                if(second<10){
+                    second1.src = "../images/0.png";
+                    second2.src = "../images/" + second + ".png";
+                }else{
+                    var second_shi = parseInt(second/10);
+                    var second_ge = second%10;
+                    second1.src = "../images/" + second_shi + ".png";
+                    second2.src = "../images/" + second_ge + ".png";
+                }
+            }
+
+            
+        }
+        </script>
+    </head>
+    <body>
+        <div>
+            <img src="" alt="" id="hour1"/>
+            <img src="" alt="" id="hour2"/>
+            时
+            <img src="" alt="" id="minute1"/>
+            <img src="" alt="" id="minute2"/>
+            分
+            <img src="" alt="" id="second1"/>
+            <img src="" alt="" id="second2"/>
+            秒
+        </div>
+    </body>
+</html>

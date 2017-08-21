@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+        window.onload = function(){
+            // 1.forEach()
+            // 该方法直接在原数组遍历，不会返回新数组
+            // item 数组中的元素 idx 数组中的索引值 a数组的引用
+            var arr = [12,42,34,52,56,43,432];
+            arr.forEach(function(item,idx,a){
+                console.log(item+2);
+            })
+
+            // 2.map()
+            // 该方法遍历原数组，返回新数组，新数组长度和原来数组长度一致，若其中有不符合遍历条件的值则返回undefined
+            var newarr = arr.map(function(item,idx){
+                if(idx%2===0){
+                    return item;
+                }
+            })
+            console.log(newarr);
+
+            //3.filter()
+            //该方法遍历原数组，返回新数组，新数组长度和原来数组长度可以不一致，只有符合条件的元素才返回
+            var newarr2 = arr.filter(function(item,idx,a){
+                // 此处判断是否符合条件，符合则返回元素。
+                return idx%2===0;
+            })
+            console.log(newarr2);
+
+            //4.every()
+            //如果该函数对每一项都返回 true，则返回true
+            var res1 = arr.every(function(item,idx,a){
+                return item<30;
+            })
+            console.log(res1);
+
+            // 5.some()
+            // 如果该函数对任何一项返回 true，则返回true
+            var res2 = arr.some(function(item,idx,a){
+                return item<30;
+            })
+            console.log(res2);
+        }
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+</html>

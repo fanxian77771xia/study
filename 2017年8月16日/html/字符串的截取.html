@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+        var str = 'good good study, day day up';
+        // 1.substring第一个参数是开始截取字符的索引值（下标）,第二个参数是最后一个字符的索引值（下标）,截取内容是从第一个字符（包括第一个字符）开始到最后一个字符（不包括最后一个字符）。
+        var res1 = str.substring(10,15);
+        console.log(res1);
+        // 2.substr第一个参数是开始截取字符的索引值（下标）,第二个参数是要截取的字符数，截取内容是从第一个字符后面（不包括第一个字符）开始到要截取的数目的内容。
+        // 其中第一个参数可以是负数，即倒数第几个数开始。从后往前索引值也是从零开始
+        var res2 = str.substr(6,3);
+        var res3 = str.substr(-6,3);
+        console.log(res3);
+        // 3.与substing相同,但两个参数都可以取负数
+        var res4 = str.slice(-10,-6);
+        console.log(res4);
+        // 后面的参数都可以省略
+        // 省略end或length表示获取到最后
+        var res5 = str.substring(17);//day day up
+        console.log(res5);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

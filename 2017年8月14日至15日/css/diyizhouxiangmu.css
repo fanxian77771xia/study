@@ -1,0 +1,122 @@
+/* 
+* @Author: Marte
+* @Date:   2017-08-14 09:48:08
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-08-14 14:35:27
+*/
+
+
+/*-----------------header-------------------*/
+#header{
+    background: #FF4500;
+    height:88px;
+    padding:0 140px;
+    position:relative;
+}
+#header .header_top_left{
+    float:left;
+    color: white;
+}
+#header .header_top_left a{
+    color:white;
+    text-decoration:underline;
+}
+#header .header_top_left span{
+    color:#FFCC00;
+}
+#header .header_top_right{
+    float:right;
+    color: white;
+    position:relative;
+}
+#header .header_top_right select:nth-child(1){
+    border:0 none;
+    background:#FF4500;
+    color:white;
+    outline:none;
+    text-decoration: underline;
+}
+#header .header_top_right i:nth-child(2){
+    display:block;
+    width:16px;
+    height:17px;
+    position:absolute;
+    top:2px;
+    left:102px;
+    background-image:url("../images/jingling.fw.png");
+    /*background-size: 100% 100%;*/
+}
+#header .header_top_right span:nth-child(3){
+    padding-left: 35px;
+}
+#header .header_top_right select:nth-child(4){
+    border:0 none;
+    background:#FF4500;
+    color:#FFCC00;
+    outline:none;
+}
+#header .header_top_right a{
+    color:white;
+    text-decoration: underline;
+}
+#header .header_top_right i:nth-child(6){
+    display:block;
+    width:15px;
+    height:14px;
+    background:url("../images/jingling.fw.png") -19px 0;
+    position:absolute;
+    top:5px;
+    left:382px;
+}
+#header .header_top_right a:nth-child(7){
+    padding-left: 30px;
+}
+#header .header_bottom_left {
+    width:239px;
+    height:29px;
+    background:url(../images/jingling.fw.png) 0 -33px;
+    position:absolute;
+    top:36px;
+    left:150px;
+}
+#header .header_center_center{
+    width:438px;
+    height:33px;
+    position:absolute;
+    top:30px;
+    left:481px;
+    border:1px solid black;
+}
+#header .header_center_center i{
+    display:block;
+    width:16px;
+    height:16px;
+    background:url(../images/jingling.fw.png) -56px 0;
+    position:absolute;
+    top:8px;
+    left:4px;
+}
+#header .header_center_center input{
+    float:left;
+}
+#header .header_center_center input:nth-child(2){
+  width:333px;
+  height:33px;
+  border:0 none;
+  outline:none;  
+  padding:0 0;
+  margin:0 0;
+  
+  padding-left: 24px;
+  background:#CFCFCF;
+}
+#header .header_center_center input:nth-child(3){
+    width:81px;
+    height:33px;
+    border:0 none;
+    margin:0;
+    padding:0;
+    color:white;
+    background:#6C5143;
+    outline:none;
+}

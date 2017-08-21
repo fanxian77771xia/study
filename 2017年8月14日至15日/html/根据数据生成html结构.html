@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+    ul{list-style: none;}
+        img{width:180px;}
+        .price span{color:#f00;}
+        .price span::before{
+            content:'￥';
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function(){
+            var goodslist = [{
+                    name:'iphone7 plugs',
+                    imgurl:'img/ip7.jpg',
+                    price:5899.00,
+                    sale:5888.00,
+                    color:'土豪金'
+                },{
+                    name:'Note7',
+                    imgurl:'img/note7.jpg',
+                    price:3899.00,
+                    sale:998.00,
+                    color:'黑色'
+                },{
+                    name:'荣耀7',
+                    imgurl:'img/honor7.jpg',
+                    price:1999.00,
+                    sale:1899.00,
+                    color:'白色'
+            }];
+
+            var datalist = document.getElementById('datalist');
+            var html = "<ul>";
+            for(i=0;i<goodslist.length;i++){
+                var goods = goodslist[i];
+                html+= "<li><img src='"+goods.imgurl+"'+ /><p>"+goods.name+"</p><p>"+goods.price+"</p><p>"+goods.sale+"</p><p>"+goods.color+"</p></li>"
+
+            }
+            html+="</ul>";
+            datalist.innerHTML=html;
+        }
+    </script>
+    </head>
+    <body>
+        <div id="datalist">
+        </div>
+    </body>
+</html>

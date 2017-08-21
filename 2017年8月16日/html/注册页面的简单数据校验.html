@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+        window.onload = function(){
+            var name = document.getElementById("name");
+            var psd = document.getElementById("psd");
+            var check = document.getElementById("check");
+            var nicheng = document.getElementById("nicheng");
+            var tip_name = document.getElementById("tip_name");
+            var tip_psd = document.getElementById("tip_psd");
+            var tip_check = document.getElementById("tip_check");
+            var tip_nicheng = document.getElementById("tip_nicheng");
+            var btn = document.getElementById("btn");
+            var zm = 'abcdefghijklmnopqrstuvwxyz0123456789_'.split('');
+           
+            function yanzhengName(){
+                var s_name = name.value.split('')
+                 
+                for(j=0;j<s_name.length;j++){
+                    for(i=0;i<zm.length;i++){
+                     console.log(s_name[j]==zm[i]);
+                        if(s_name[j]!=zm[i]){
+                           
+                           
+
+                        }else{
+                             tip_name.innerHTML="只能包含数字、字母和下划线"
+                        }
+                        
+                        if(s_name.length<6 || s_name.length>20){
+                            tip_name.innerHTML="长度不低于6，不高于20"
+                        }
+
+                        if(s_name*1){
+                            tip_name.innerHTML="数字不可以开头"
+                        }
+                    }
+                }
+                
+
+               
+            }
+
+            name.onchange = function(){
+                yanzhengName();
+            }
+        }
+        </script>
+    </head>
+    <body>
+    
+        <label for="name">姓名</label><input type="text" id="name"/><span id="tip_name"></span><br />
+        <label for="psd">密码</label><input type="text" id="psd"/><span id="tip_psd"></span><br />
+        <label for="check">确认密码</label><input type="text" id="check"/><span id="tip_check"></span><br />
+        <label for="nicheng">昵称</label><input type="text" id="nicheng"/><span id="tip_nicheng"></span><br />
+        <button id="btn">提交</button>
+    
+        
+    </body>
+</html>
