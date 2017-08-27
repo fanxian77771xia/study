@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            window.onload = function(){
+                var showposition = document.getElementById("showposition");
+
+                document.onmousemove = function(e){
+                    e = e || window.event;
+                    var left = e.clientX;
+                    var top = e.clienY;
+                    showposition.innerHTML = "<p>X:"+e.clientX + "Y:" +e.clientY+"</p>"
+                    +"<p>screenX:"+e.screenX+"screenY:"+e.screenY+"</p>"; 
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="showposition"></div>
+    </body>
+</html>

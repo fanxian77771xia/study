@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+
+            li{position:relative;}
+            li img{}
+            .details{display:none;position:absolute;top:0;left:0;}
+            #box{
+                width:0px;
+                height:0px;
+                border:5px solid black;
+                border-color:transparent;
+                border-bottom-color:#f60;
+
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = function(){
+                var newslist = document.getElementsByClassName("newslist")[0];
+                var details = document.getElementsByClassName("details")[0];
+                var lii = newslist.children;
+
+                for(i=0;i<lii.length;i++){
+                    lii[i].onmouseover = function(){
+                        
+                        details.style.display="block";
+                        details.innerHTML = this.children[0].title;
+                        this.children[0].bk = this.children[0].title;
+                        this.children[0].title = "";
+
+                    }
+                    lii[i].onmousemove = function(e){
+                        details.style.left = e.clientX + "px";
+                        details.style.top = e.clientY + "px";
+                    }
+                    lii[i].onmouseout = function(){
+                        details.style.display= "none";
+                        this.children[0].title = this.children[0].bk;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>新闻提示信息</h1>
+        <ul class="newslist">
+            <li><a href="#" title="小明由于调戏女老师再次被滚粗教室">教室文化</a></li>
+            <li><a href="#" title="iPhone10发布,屏幕高度亮瞎了所有小伙伴">iphone10发布会</a></li>
+            <li><a href="#" title="为了弘扬乐于助人的精神，中国人大开会决定授予老王“中国好邻居”称号">关于老王</a></li>
+        </ul>
+        <div class="details"></div>
+        <div id="box"></div>
+    </body>
+</html>

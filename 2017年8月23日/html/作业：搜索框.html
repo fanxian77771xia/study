@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            *{
+                margin:0px;
+                padding:0px;
+            }
+            html{
+                background:#23384E;
+            }
+
+            #search{
+                width:348px;
+                height:32px;
+                margin:0 auto;
+                background:#C2C2C2;
+                position:relative;
+            }
+            #cover{
+                float:left;
+                margin-left:40px;
+                position:absolute;
+                top:3px;
+                left:3px;
+                width:180px;
+                height:20px;
+                border:0 none;
+                outline:none;
+            }
+            #list{
+                float:left;
+                outline:none;
+                width:200px;
+                height:25px;
+                border:1px solid white;
+                border-radius:3px;
+                margin-left:40px;
+            }
+            .op{
+                display:none;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = function(){
+                var cover = document.getElementById("cover");
+                var list = document.getElementById("list");
+                var ops = list.children;
+                var content ="";
+
+                list.onchange = function(){
+                    for(i=0;i<ops.length;i++){
+                        // 注意判断selected属性的值是true或false
+                        if(ops[i].selected==true){
+                            content = ops[i].innerHTML;
+                        }
+                    }
+                    cover.value = content;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="search">
+            <input type="text" placeholder="请选择游戏" id="cover"/>
+            <select name="" id="list">
+                <!-- option不能绑定事件 -->
+                <option value="" selected disabled class="op"></option>
+                <option value="地下城与勇士">地下城与勇士</option>
+                <option value="魔兽世界（国服）">魔兽世界（国服）</option>
+                <option value="魔兽世界（台服）">魔兽世界（台服）</option>
+                <option value="热血江湖">热血江湖</option>
+                <option value="大话西游II">大话西游II</option>
+                <option value="QQ幻想世界">QQ幻想世界</option>
+            </select>
+            <button>搜索</button>
+        </div>
+    </body>
+</html>

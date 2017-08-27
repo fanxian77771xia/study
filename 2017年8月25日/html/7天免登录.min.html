@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang=en> <head><meta charset=utf-8><style type=text/css>
+            #welcome{display:none;}
+            #welcome strong{color:#f60;}
+            .form label{display: inline-block;width:80px;text-align:right;}
+            .form > div{padding:5px 0;}
+            .form [type=checkbox]{margin-left:85px;}
+            .form .btnLogin{margin-left:85px;}
+        </style><script type=text/javascript>
+            window.onload = function(){
+                // 抓取元素
+                var welcome = document.getElementById("welcome");
+                var button = document.getElementsByTagName("button")[0];
+                var form = document.getElementsByClassName("form")[0];
+                var btnlogin = document.getElementsByClassName("btnLogin")[0];
+                var checkbox = document.getElementById("checkbox");
+                var username = document.getElementById("username");
+                var password = document.getElementById("password");
+
+                // 给登录按钮添加事件
+                btnlogin.onclick = function(e){
+                    // 取消form提交行为默认行为
+                    e.preventDefault ? e.preventDefault() : e.returnValue=false;
+
+                    e = e || window.event;
+                    // 先获取用户名和密码
+                    var _username = username.value;
+                    var _password = password.value;
+
+                    // 设置日期延长cookie的有效期
+                    var date = new Date();
+                    date.setDate(date.getDate()+7);
+ 
+                    //然后判断是否七天面登录
+                    //如果存在写入cookie
+                    if(checkbox.checked){
+                        document.cookie = "username ="+_username+"; expires="+date.toString();
+                        document.cookie = "password ="+_password+"; expires="+date.toString();
+                        
+                    }
+                        changeState(1);              
+                }
+
+                //设置退出按钮
+                button.onclick = function(e){
+                    e = e || window.event;
+                    var target = e.target || e.srcElement;
+                    console.log(form);
+                    if(target.tagName.toLowerCase() === 'button'){
+                    changeState();
+                }
+                    
+                } 
+                
+                // 封装一个函数用来判断是登录还是退出
+                function changeState(denglu){
+                    denglu = denglu || window.event;
+                    if(denglu){
+                        welcome.style.display = "block";
+                        form.style.display = "none";
+                    }else{
+                        welcome.style.display = "none";
+                        form.style.display = "block";
+                    }
+                }
+                
+            }
+        </script></head> <body> <h1>国家安全信息管理系统</h1> <div id=welcome><strong>xxx</strong>，您好，欢迎登录国家安全信息管理系统，请尽情发挥 <button>退出</button></div> <form class=form> <div> <label for=username>用户名：</label> <input type=text id=username name=username> </div> <div> <label for=password>密码：</label> <input type=password id=password name=password> </div> <div><input type=checkbox id=checkbox>七天免登录</div> <button class=btnLogin>登录</button> </form> </body> </html>

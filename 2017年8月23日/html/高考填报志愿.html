@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            .box{position:relative;background-color: #f00;width:140px;height:445px;overflow:hidden;}
+            .box img{display:none;position:absolute;top:0;left:-10px;}
+        </style>
+        <script type="text/javascript">
+            window.onload = function(){
+                var box = document.getElementsByClassName("box")[0];
+                var img = box.children[0];
+
+                box.onmousedown = function(e){
+                    e = e || window.event;
+                    img.style.display = 'block';
+                    if(e.button == 0){
+                        img.style.left = "-10px";
+                    }
+                    else if(e.button == 1){
+                        img.style.left = "-140px";
+                    }
+                    else if(e.button == 2){
+                        // 因为已经设置了left,如果又想设置right,只能改变left为auto,否则只会读取left的值
+                        img.style.left = "auto";
+                        img.style.right = "0";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="box">填写高考志愿<img src="../img/timg.jpeg"></div>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            var cookies = document.cookie;
+
+            // console.log(cookies);
+            // document.write(cookies);
+            var arr_cookies = cookies.split("; ")
+            arr_cookies.forEach(function(item){
+                var temp = item.split("=");
+                document.write("<p>" + temp[0] + ":" + temp[1] + "</p>");
+            })
+
+            
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
