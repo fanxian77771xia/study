@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		#box{position:absolute;width:480px;height:200px;border:1px solid #ddd;padding:1px;display:none;}
+		#box h4{margin:0;padding:10px;border-bottom:1px solid #ddd;}
+		.content{padding:15px;min-height:100px;}
+		#box .btnClose{position: absolute;top:5px;right:10px;padding:5px;}
+		#box .btnClose:hover{background-color:#f00;color:#fff;}
+		#tuichuyemian{display:none;}
+	</style>
+	<script>
+		document.addEventListener("DOMContentLoaded",function(){
+			var box = document.getElementById('box');
+			var show = document.getElementById('show');
+			var btnClose = document.getElementById('btnClose');
+			var btnCheck = document.getElementById('btnCheck');
+			var username = document.getElementById('username');
+			var usernamecheck = document.getElementById('usenamecheck');
+			var password = document.getElementById('password');
+			var passwordcheck = document.getElementById('passwordcheck');
+			var agree = document.getElementById('agree');
+			var yemian = document.getElementById('yemian');
+			var out = document.getElementById('out');
+			var tuichuyemian = document.getElementById('tuichuyemian');
+			var neirong = document.getElementById('neirong');
+			// 点击弹出登录框
+			show.onclick = function(){
+				box.style.display = 'block';
+				// 居中
+			box.style.left = (window.innerWidth - box.offsetWidth)/2 + 'px';
+			box.style.top = (window.innerHeight - box.offsetHeight)/2 + 'px';
+			}
+			
+
+			window.onresize = function(){
+				box.style.left = (window.innerWidth - box.offsetWidth)/2 + 'px';
+				box.style.top = (window.innerHeight - box.offsetHeight)/2 + 'px';
+			}
+			// 鼠标按下并移动（开始拖拽）
+			box.onmousedown = function(evt){
+				evt = evt || window.event;
+				var target = evt.target || evt.srcElement ;
+				if(target.tagName.toLowerCase()=="h4"){console.log(666)
+					// 在摁下时，记录摁下的位置
+					// 摁下光标位置距离事件源对象的偏移量
+					// offsetX,offsetY
+					var ox = evt.offsetX;
+					var oy = evt.offsetY;
+
+
+					document.onmousemove = function(e){console.log(666)
+						e = e || window.event;
+
+
+						// 在拖拽的过程中不断改变#box的top,left
+						box.style.left = e.clientX - ox + 'px';
+						box.style.top =  e.clientY - oy + 'px';
+
+
+						if(e.preventDefault){
+							e.preventDefault();
+						}else{
+							e.returnValue = false;
+						}
+					}
+				}
+
+				// 鼠标松开（拖拽完成）
+				document.onmouseup = function(){
+					document.onmousemove = null;
+				}
+			}
+
+			// 关闭弹窗
+			btnClose.onclick = function(){
+				box.style.display = 'none';
+			}
+			
+			btnCheck.onmouseover = function(){
+				if(agree.checked){
+					btnCheck.onclick = function(e){
+						e = e || window.event;
+						var a = 0;
+						var b = 0;
+						var _username = username.value;
+						if(!/^[a-zA-Z][a-zA-Z0-9]{5,11}$/.test(_username)){
+							usenamecheck.innerHTML = '用户名不合法';
+							username.focus();
+							 a=0;
+							return false;
+						}else{
+							usenamecheck.innerHTML = '';
+							a=1;
+						}
+
+						var _password = password.value;
+						if(!/^\S{6,18}$/.test(_password)){
+							passwordcheck.innerHTML = '密码不合法';
+							password.focus();
+							b = 0;
+							return false;
+						}else{
+							passwordcheck.innerHTML = '';
+							b=1;
+						}
+						if(a==1&&b==1){
+							yemian.style.display = 'none';
+							tuichuyemian.style.display = 'block';
+							neirong.innerHTML = "你好"+username.value+"，欢迎来到国家信息安全系统，"
+						}		
+					}
+				}else{
+					btnCheck.style.color = 'grey';console.log(666)
+				}
+			}
+			out.onclick=function(){
+				yemian.style.display = 'block';
+				tuichuyemian.style.display = 'none';
+				box.style.display = 'none';
+				username.value = '';
+				usenamecheck.innerHTML = '';
+				password.value = '';
+				passwordcheck.innerHTML = '';
+			}
+			
+		})
+			
+
+		
+	</script>
+</head>
+<body>
+	<p id='yemian'>你好，欢迎来到国家信息安全系统，请先<a href="#" id='show'>登录</a></p>
+	<div id='tuichuyemian'><p id='neirong'></p><a href='#' id='out'>退出</a></div>
+	<div id="box">
+		
+		<h4>弹窗标题</h4>
+		<div class="content">
+			<div>
+				<label class="label">账号</label>
+				<input id="username" type="text" placeholder="用户名不得使用特殊字符，长度在6-20之间"/>
+				<div id='usenamecheck'></div>
+			</div>
+			<div>
+				<label class="label">密码</label>
+				<input id="password" type="password" />
+				<div id='passwordcheck'></div>
+			</div>
+			<div>
+				<input type="checkbox" class="checkbox" id="agree"/>
+				<label>同意<a href="#">保密协议</a></label>
+			</div>
+			
+		</div>
+		<span class="btnClose" id="btnClose">&times;</span>
+		<input type="submit" id="btnCheck" value="确定" />
+	</div>
+</body>
+</html>

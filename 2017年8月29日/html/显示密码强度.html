@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            document.onreadystatechange = function(){
+                if(document.readyState=='interactive'){
+                        var username = document.getElementById("username");
+                    var tip = document.getElementById('tip');
+                    var tip2 = document.getElementById('tip2');
+                    var tip3 = document.getElementById('tip3');
+                    var nickname = document.getElementById('nickname');
+                    var email = document.getElementById('email');
+                    var psd = document.getElementById("psd");
+                    var btn = document.getElementById("btn");
+                    var strong = document.getElementById("strong");
+                    
+                    username.onkeyup = function(){
+                        var _username = username.value;
+                        if(!/[a-zA-Z0-9]{3,}/g.test(_username)){
+                            tip.innerHTML = "用户名错误";
+                        }else{
+                            tip.innerHTML = "用户名正确";
+                        }
+                    }
+                    nickname.onkeyup = function(){
+                        var _nickname = nickname.value;
+                        if(!/[a-zA-Z\u28E0-\u9FFF]/g.test(_nickname)){
+                            tip2.innerHTML = "昵称错误";
+                        }else{
+                            tip2.innerHTML = "昵称正确";
+                        }
+                    }
+                    email.onkeyup = function(){
+                        var _email = email.value;
+                        if(!/^[a-z][\w\-\.]{5,17}@[\w\-]{2,67}(\.[a-z]{2,5}$)+/.test(_email)){
+                            tip3.innerHTML = "邮箱错误";
+                        }else{
+                            tip3.innerHTML = "邮箱正确";
+                        }
+                    }
+                    psd.onkeyup = function(){
+                        var _psd = psd.value;
+                        if(!/[\.\/\-\_\w]{6,}/.test(_psd)){
+                            strong.innerHTML = "密码错误";
+                            return false;
+                        }else{
+                            if(/[a-z]/ig.test(_psd)&&/[\.\/\-\_]/g.test(_psd)&&/\d/g.test(_psd)){
+                                    strong.innerHTML = "密码较强";
+                            }
+                            else if(/[a-zA-Z]/.test(_psd)&&/\d/g.test(_psd)){
+                                    strong.innerHTML = "密码一般";
+                            }
+                            else{
+                                strong.innerHTML = "密码较弱";
+                            }
+                        }
+                        
+                    }
+                }
+                
+            }
+        </script>
+        <style type="text/css">
+            #box{
+                width:400px;
+                height:400px;
+                margin:150px auto;
+                border:1px solid black;
+            }
+            #box1{
+                display:block;
+                width:300px;
+                margin:30px auto;
+            }
+            #box2{
+                display:block;
+                width:300px;
+                margin:30px auto;
+            }
+            #box3{
+                display:block;
+                width:300px;
+                margin:30px auto;
+            }
+            #box4{
+                display:block;
+                width:300px;
+                margin:30px auto;
+            }
+            #btn{
+                margin-left:50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id='box'>
+            <div id='box1'>
+                <label for="username">登录名</label><input type="text" id="username" required/>  <div id='tip'></div>
+            </div>
+            <div id='box2'>               
+                <label for="nickname">昵称</label><input type="text" id="nickname"/>
+                <div id='tip2'></div>
+            </div>
+            <div id='box3'>               
+                <label for="email">电子邮件</label><input type="text" id='email'/>
+                <div id='tip3'></div>
+            </div>
+            <div id='box4'>
+                <label for="psd">密码</label><input type="password" id="psd" required/>
+                <div id="strong"></div>
+            </div>
+            
+            
+            <input type="submit" id="btn" value="提交"/>
+        </div>
+        
+        
+    </body>
+</html>

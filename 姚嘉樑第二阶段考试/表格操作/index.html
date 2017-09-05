@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            tr{
+                background:white;
+            }
+        </style>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded',function(){
+                var goodslist = [
+                    { name: "刘备", nickname: "小刘", age: 58, gender: "男", hobby: ["撩妹", "装逼", "编草鞋"] },
+                    { name: "关羽", nickname: "关二", age: 47, gender: "男", hobby: ["耍大刀", "变脸", "喝酒"] },
+                    { name: "张飞", nickname: "张三", age: 45, gender: "男", hobby: ["打架", "喝酒", "耍流氓"] },
+                    { name: "赵云", nickname: "赵四", age: 22, gender: "男", hobby: ["打架", "喝酒", "耍帅"] },
+                    { name: "貂蝉", nickname: "美女", age: 20, gender: "女", hobby: ["撩汉", "化妆"] },
+                    { name: "小乔", nickname: "乔二", age: 18, gender: "女", hobby: ["弹琴", "唱歌", "撩周瑜"] }
+                ]
+
+                // 获取元素
+                var datalist = document.getElementById('datalist');
+
+                // 思路：拼接字符串
+                var html = '<table><tr><td><input type="checkbox" id="quanxuan"/></td><td>#</td><td>姓名</td><td>昵称</td><td>年龄</td><td>性别</td><td>爱好</td><td>操作</td></tr>';
+                
+                for(var i=0;i<goodslist.length;i++){
+                    var goods = goodslist[i];
+
+                    html +='<tr class="hang"><td><input type="checkbox" class="xuan"/></td><td>'+(i+1)+'</td><td>'+goods.name+'</td><td>'+goods.nickname+'</td><td>'+goods.age+'</td><td>'+goods.gender+'</td><td>'+goods.hobby+'</td><td><button class="del">&times;</button></td></tr>';
+                }
+
+
+                // 闭合ul标签
+                html += '</table>';
+
+                datalist.innerHTML = html;
+                var quanxuan = document.getElementById('quanxuan');
+                var hang = document.getElementsByClassName('hang');
+                var xuan = document.getElementsByClassName('xuan');
+                var del = document.getElementsByClassName('del');
+                quanxuan.onclick = function(){
+                    if(quanxuan.checked){console.log(66)
+                        for(var i=0;i<xuan.length;i++){
+                            xuan[i].checked = true;
+                            xuan[i].parentNode.parentNode.style.background = "red";
+                        }
+                        
+                    }else{
+                        for(var i=0;i<xuan.length;i++){
+                            xuan[i].checked = false;
+                            xuan[i].parentNode.parentNode.style.background = "white";
+                        }
+                    }
+                }
+                
+
+
+                for(var i=0;i<del.length;i++){
+                    del[i].onclick = function(){
+                        var currentTr = this.parentNode.parentNode;
+                        currentTr.parentNode.removeChild(currentTr);
+                    }
+                }
+
+                for(var i=0;i<xuan.length;i++){console.log(xuan[i])
+                    
+                    xuan[i].onclick = function(e){
+                        e = e || window.event;
+                        var target= e.target || e.srcElement;
+                        if(target.className.toLowerCase()=='xuan'){
+                            if(target.checked){
+                                var currentTr = this.parentNode.parentNode;
+                                currentTr.style.background = "red";
+                            }else{
+                                var currentTr = this.parentNode.parentNode;
+                                currentTr.style.background = "white";
+                            }
+                            
+                        }
+                        
+                    }
+                }
+                
+
+            })
+        </script>
+    </head>
+    <body>
+        <div id="datalist">
+
+        </div>
+    </body>
+</html>
+<!--  -->

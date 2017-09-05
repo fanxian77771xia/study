@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            window.onload = function(){
+                var input = document.getElementById("input");
+                var button = document.getElementById("btn");
+                var output = document.getElementById("output");
+                var reg = /jpg$|doc$|excel$|img$|ppt$|js$|css$|txt$|html$|png$|gif$/;
+
+                
+                btn.onclick = function(){
+                    
+                    if(String(input.value).match(reg)){
+                        var res = String(input.value).match(reg);
+                        console.log(res)
+                        output.innerHTML = "该文件是"+res+"类型文件";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="file" id="input"/>
+        <button id="btn">测试</button>
+        <div id="output"></div>
+    </body>
+</html>

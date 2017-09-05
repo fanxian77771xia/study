@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            #basketball{
+                position:absolute;
+                transform:translate(-50%,0);
+                left:50%;
+                top:0;
+            }
+        </style>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded',()=>{
+                var basketball = document.querySelector('#basketball');
+                var speed = 10;
+
+                var timer = setInterval(()=>{
+                    speed +=10; 
+                    var top = basketball.offsetTop;
+                   
+                    if(top>=window.innerHeight-basketball.offsetHeight){
+                        // clearInterval(timer);
+                        top = window.innerHeight-basketball.offsetHeight-speed;
+                        
+                    }
+                     basketball.style.top =top + speed + "px"; 
+                },30)
+            })
+        </script>
+    </head>
+    <body>
+        <img src="../img/basketball.jpg" height="40" width="40" alt="" id="basketball"/>
+    </body>
+</html>

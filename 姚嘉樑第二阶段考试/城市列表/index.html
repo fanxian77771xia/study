@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <style type="text/css">
+            #datalist{
+                height:0;
+                overflow:hidden;
+            }       
+            ul,li{
+                list-style:none;
+
+            }
+            
+            h4{
+                display:inline-block;
+            }
+            p{
+                display:inline-block;
+            }
+            .true{
+                color:red;
+            }
+        </style>
+        <script src="js/common.js"></script>
+        <script type="text/javascript">
+             document.addEventListener("DOMContentLoaded",function(){
+                    
+
+                    var goodslist = [{
+                        name: "北京", 
+                        id: 110100, 
+                        hot: true 
+                    }, { 
+                        name: "上海",
+                        id: 310000,
+                        hot: true 
+                    }, { 
+                        name: "南京市", 
+                        id: 320100 
+                    }, { 
+                        name: "广州", 
+                        id: 440100, 
+                        hot: true 
+                    }, { 
+                        name: "深圳", 
+                        id: 440300, 
+                        hot: true 
+                    }, { 
+                        name: "成都", 
+                        id: 510100 
+                    }, { 
+                        name: "杭州", 
+                        id: 330100 
+                    }, { 
+                        name: "南宁", 
+                        id: 450100 
+                    }, { 
+                        name: "大连", 
+                        id: 210200 
+                    }]
+                    var datalist = document.getElementById('datalist');
+                    var input = document.getElementById('input');
+                    var btn = document.getElementById('btn');
+                    var result = document.getElementById('result');
+                    var html = '<ul>';
+
+                    var cookies = document.cookie;
+                    var carlist = [];
+                        if(cookies.length>0){
+                            cookies = cookies.split('; ');
+                            cookies.forEach(function(cookie){
+                                var temp = cookie.split('=');
+
+                                if(temp[0] === 'carlist'){
+                                    
+                                    input.value = temp[1];
+                                }
+                            });
+                    }
+                    for(var i=0;i<goodslist.length;i++){
+                        var goods = goodslist[i];
+                        html +='<li class='+'"'+goods.hot+'"'+'><h4>'+goods.name+'</h4><p>'+goods.id+'</p></li>';
+                    }
+
+                    
+                    html += '</ul>';
+                    console.log(html)
+                    datalist.innerHTML = html;
+
+                    input.onfocus = function(){
+                        animate(datalist,{height:144});
+
+                    }
+                    btn.onclick = function(){
+                        animate(datalist,{height:144});
+                    }
+                    input.onblur = function(){
+                        animate(datalist,{height:0});
+                    }
+                    datalist.onclick = function(evt){
+                        evt = evt || window.event;
+                        var target = evt.target || evt.srcElement ;console.log(target)
+                        if(target.tagName.toLowerCase()=="li"){
+                            input.value = target.children[0].innerHTML;
+                            result.innerHTML ="你选择了:" + target.children[0].innerHTML;
+                            var date = new Date();
+                            date.setDate(date.getDate()+7);
+                            document.cookie = 'carlist=' + JSON.stringify(input.value) + ';expires=' + date.toUTCString();
+                        }
+                        if(target.tagName.toLowerCase()=="h4"){
+                            input.value = target.innerHTML;
+                            result.innerHTML ="你选择了:" + target.innerHTML;
+                            var date = new Date();
+                            date.setDate(date.getDate()+7);
+                            document.cookie = 'carlist=' + JSON.stringify(input.value) + ';expires=' + date.toUTCString();
+                        }
+                        if(target.tagName.toLowerCase()=="p"){
+                            input.value = target.previousElementSibling.innerHTML;
+                            result.innerHTML ="你选择了:" + target.previousElementSibling.innerHTML;
+                            var date = new Date();
+                            date.setDate(date.getDate()+7);
+                            document.cookie = 'carlist=' + JSON.stringify(input.value) + ';expires=' + date.toUTCString();
+                        }
+                    }
+             })
+        </script>
+       
+    </head>
+    <body>
+        <input type="text" id="input"/><button id='btn'>选择城市</button><span id='result'></span>
+        <div id="datalist" class="clearfix">
+
+        </div>
+
+    </body>
+    
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded',function(){
+                var btn = document.getElementsByClassName('btn');
+                var output = document.getElementById('output');
+
+                for(i=0;i<btn.length;i++){
+                    btn[i].onclick = function(){
+                        setTimeout(function(){
+                            output.innerHTML = this.innerHTML;
+                        }.bind(this),1000)
+                    }
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <button class="btn">按钮1</button>
+        <button class="btn">按钮2</button>
+        <button class="btn">按钮3</button>
+        <button class="btn">按钮4</button>
+        <button class="btn">按钮5</button>
+        <div id="output"></div>
+    </body>
+</html>

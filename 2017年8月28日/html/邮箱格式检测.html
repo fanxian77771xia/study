@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            window.onload = function(){
+                var input = document.getElementById("input");
+                var button = document.getElementById("button");
+                var output = document.getElementById("output");
+
+                var reg = /^[a-zA-Z0-9\.]{1,}@[a-z0-9\-]{1,}(\.com|\.cn|\.com.cn)$/
+                button.onclick = function(){
+                    if(input.value.match(reg)){
+                        output.innerHTML = "该邮箱合法";
+                    }else{
+                        output.innerHTML = "该邮箱不合法";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="input"/>
+        <button id="button">测试</button>
+        <div id="output"></div>
+    </body>
+</html>

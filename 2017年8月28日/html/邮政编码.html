@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            window.onload = function(){
+                var input = document.getElementById("input");
+                var button = document.getElementById("button");
+                var output = document.getElementById("output");
+                var reg = /^[0-9]{6}$/
+                button.onclick = function(){
+                    if(reg.test(input.value)){
+                        output.innerHTML = "该邮编合法"
+                    }else{
+                        output.innerHTML = "该邮编不合法"
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="input"/>
+        <button id="button">测试</button>
+        <div id="output"></div>
+    </body>
+</html>

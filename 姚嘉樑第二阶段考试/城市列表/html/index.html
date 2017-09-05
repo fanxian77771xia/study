@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href=".css" />
+        <style type="text/css">
+
+            ul,li{
+                list-style:none;
+
+            }
+
+            h4{
+                display:inline-block;
+            }
+            p{
+                display:inline-block;
+            }
+            .true{
+                color:red;
+            }
+        </style>
+        <script type="text/javascript">
+             document.addEventListener("DOMContentLoaded",function(){console.log(66)
+                    var goodslist = [{
+                        name: "北京", 
+                        id: 110100, 
+                        hot: true 
+                    }, { 
+                        name: "上海",
+                        id: 310000,
+                        hot: true 
+                    }, { 
+                        name: "南京市", 
+                        id: 320100 
+                    }, { 
+                        name: "广州", 
+                        id: 440100, 
+                        hot: true 
+                    }, { 
+                        name: "深圳", 
+                        id: 440300, 
+                        hot: true 
+                    }, { 
+                        name: "成都", 
+                        id: 510100 
+                    }, { 
+                        name: "杭州", 
+                        id: 330100 
+                    }, { 
+                        name: "南宁", 
+                        id: 450100 
+                    }, { 
+                        name: "大连", 
+                        id: 210200 
+                    }]
+                    var datalist = document.getElementById('datalist');
+
+                    
+                    var html = '<ul>';
+
+                    for(var i=0;i<goodslist.length;i++){
+                        var goods = goodslist[i];
+                        html +='<li class='+'"'+goods.hot+'"'+'><h4>'+goods.name+'</h4><p>'+goods.id+'</p></li>';
+                    }
+
+                    
+                    html += '</ul>';
+                    console.log(html)
+                    datalist.innerHTML = html;
+             })
+        </script>
+       
+    </head>
+    <body>
+        <input type="text" id="input"/><button>选择城市</button>
+        <div id="datalist clearfix">
+
+        </div>
+    </body>
+</html>

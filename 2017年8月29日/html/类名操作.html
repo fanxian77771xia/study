@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    <style>
+        .box{width:100px;height:100px;background-color: #ddd;}
+        .active{background-color: #fc0}
+        .hide{display:none;}
+    </style>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded',function(){
+            var box = document.getElementsByClassName("box")[0];
+            box.onmouseover = function(){
+                box.classList.add("active");
+            }
+            box.onmouseout = function(){
+                box.classList.remove("active");
+            }
+            btn.onclick = function(){
+                box.classList.toggle("hide");
+            }
+            var boolean = box.classList.contains('mamasho');
+            console.log(boolean);
+            var length = box.classList.length;
+            console.log(length);
+        })
+    </script>
+    </head>
+    <body>
+        <div class="box content mamashuo yu"></div>
+        <button id="btn">显示隐藏</button>
+    </body>
+</html>

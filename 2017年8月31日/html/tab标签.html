@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            .active{
+                background:red;
+            }
+            .show{
+                display:block;
+            }
+            .hidden{
+                display:none;
+            }
+        </style>
+    <script type="text/javascript">
+        document.onreadystatechange = function(){
+            if(document.readyState=='interactive'){
+                var tab = document.querySelector('#tab');
+                var content = document.querySelector('#content');
+                var tabChild = tab.children;
+                var contentChild = content.children;
+
+                for(i=0;i<tabChild.length;i++){
+                    tabChild[i].idx = i ;
+
+                    contentChild[i].idx = i ;
+                }console.log(tabChild[1].idx)
+
+                for(i=0;i<tabChild.length;i++){
+                    if(tabChild[i].idx == 0){
+                        tabChild[i].className = 'active';
+                    }else{
+                        tabChild[i].className = '';
+                    }
+                    if(contentChild[i].idx == 0){
+                        contentChild[i].className = "show";
+                    }else{
+                        contentChild[i].className = "hidden";
+                    }
+                }
+
+                tab.onclick = function(e){
+                    e = e || window.event;
+                    var target = e.target || e.srcElement;
+                    if(target.nodeName.toLowerCase()=='span'){
+                        _idx = target.idx; 
+
+                        for(j=0;j<tabChild.length;j++){
+                            if(tabChild[j].idx==_idx){
+                                tabChild[j].className = 'active';
+                            }else{
+                                tabChild[j].className = ""
+                            }
+                        }
+
+                        for(l=0;l<tabChild.length;l++){
+                            if(contentChild[l].idx==_idx){
+                                contentChild[l].className = 'show';
+                            }else{
+                                contentChild[l].className = 'hidden';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    </head>
+    <body>
+        <div>
+            <div id="tab">
+                <span>tab1</span>
+                <span>tab2</span>
+                <span>tab3</span>
+            </div>
+            <div id="content">
+                <p>大家好1</p>
+                <p>大家好2</p>
+                <p>大家好3</p>
+            </div>
+        </div>
+        
+    </body>
+</html>

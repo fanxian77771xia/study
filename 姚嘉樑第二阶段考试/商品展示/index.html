@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		ul{padding:0;margin:0;list-style: none;}
+		.goods{width:420px;border:1px solid #ddd;padding:10px;}
+		.goods > img{width:420px;}
+		.goods ul{overflow: hidden;}
+		.goods li{float:left;margin-top:8px;margin-right:8px;width:50px;height:50px;padding:5px;border:1px solid #ddd;}
+		.goods li:hover{border-color:#f60;}
+		.goods li.active{border:2px solid #f60;padding:4px;}
+
+	</style>
+    <script type="text/javascript" src='js/common.js'></script>
+	<script>
+		window.onload = function(){
+			var bigImg = document.getElementById('big');
+			var goods = bigImg.parentNode;
+            var btnl = document.getElementById('btnl');
+            var btnr = document.getElementById('btnr');
+            var ul = document.getElementById('ul');
+			var lis = goods.getElementsByTagName('li');
+
+			lis[0].className = 'active';
+
+			
+			for(var i=0;i<lis.length;i++){
+				lis[i].onclick = function(){
+					
+					for(var i=0;i<lis.length;i++){
+						lis[i].className = '';
+					}
+
+					
+					this.className = 'active';
+
+					var smallImg = this.children[0];
+					
+					bigImg.src = smallImg.src.replace('small','big');
+				}
+			}
+
+            
+
+		}
+	</script>
+</head>
+<body>
+	<div class="goods">
+		<img src="img/big_1.jpg" id="big">
+		<ul id='ul'>
+			<li><img src="img/small_1.jpg"></li>
+			<li><img src="img/small_2.jpg"></li>
+			<li><img src="img/small_3.jpg"></li>
+			<li><img src="img/small_4.jpg"></li>
+			<li><img src="img/small_5.jpg"></li>
+			<li><img src="img/small_6.jpg"></li>
+
+		</ul>
+	</div>
+    <button id="btnl">左键</button>
+    <button id="btnr">右键</button>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded',function(){
+                var news = document.querySelector('#news');
+                var content = document.querySelector('#content');
+                var btn = document.querySelector('#btn');
+
+                btn.onclick = function(){
+                    var _content = content.value;
+                    var date = new Date();
+                    var li = document.createElement('li');
+                    li.innerHTML = _content + date;
+                    news.children[0].appendChild(li);
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <div id="news">
+            <ul>
+                
+            </ul>
+        </div>
+        <input type="text" id="content"/>
+        <button id="btn">发送</button>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            ul,li{list-style:none;}
+            a{  text-decoration:none;
+                display:block;
+                width:100px;
+                height:30px;
+                background:grey;
+            }
+        </style>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded",()=>{
+                var list = document.querySelector("#list");
+                
+                list.onmouseover = (e)=>{
+                    clearInterval(timer);
+                    e = e || window.event;
+                    var target = e.target || e.srcElement;
+                    var long = 0;
+                    if(target.nodeName.toLowerCase()=='a'){
+                        var timer = setInterval(()=>{
+                            long +=10;
+                            var length = target.offsetWidth;
+                            if(length>=150){
+                                clearInterval(timer);
+                                
+                            }
+                            target.style.width = length + long + 'px'; 
+                        },30)
+                        
+
+                    }
+                }
+                list.onmouseout = (evt)=>{
+                    clearInterval(_timer);
+                    evt = evt || window.event;
+                    var target = evt.target || evt.srcElement;
+                    var long = 0;
+                    if(target.nodeName.toLowerCase()=='a'){
+                        var _timer = setInterval(()=>{
+                            long -=10;
+                            var length = target.offsetWidth;
+                            if(length<=150){
+                                clearInterval(_timer);
+                                
+                            }
+                            target.style.width = length + long + 'px'; 
+                        },30)
+                    }
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <ul id='list'>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">千锋精品课程</a></li>
+            <li><a href="#">css相关知识</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+        
+        
+        
+        
+        
+    </body>
+</html>

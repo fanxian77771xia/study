@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            #car{position:absolute;top:50%;left:0;}
+        </style>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded',()=>{
+                var car = document.querySelector('#car');
+                var speed = 100;
+                var timer = setInterval(()=>{
+                    speed-=5;
+                    let left = car.offsetLeft;
+                    if(speed<=0){
+                        clearInterval(timer);
+                        
+                    }
+                    car.style.left = left + speed +'px';
+                },30)
+            })
+        </script>
+    </head>
+    <body>
+        <img src="../img/car.jpg" height="48" width="100" alt="" id="car"/>
+    </body>
+</html>
