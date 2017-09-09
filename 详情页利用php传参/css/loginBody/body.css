@@ -1,0 +1,198 @@
+/*整体*/
+main{
+	width: 100%;
+	position: relative;
+}
+/*图片*/
+main .tupian{
+	position: relative;
+}
+main .tupian img{
+	/*position: absolute;*/
+	top: 27px;
+	right: 168px;
+	position:fixed;
+}
+/*container部分*/
+main .container{
+	height: 500px;
+}
+/*标题部分*/
+main .container .main_t{
+	height: 38px;
+	margin-top: 14px;
+	border-bottom: 2px solid #404040;
+}
+main .container .main_t h2{
+	height: 38px;
+	color: #5A5A5A;
+	font-size: 16px;
+	line-height: 38px;
+	
+}
+/*标题下部分*/
+main .container .main_b .main_bc{
+	width: 847px;
+	height: 389px;
+	margin: 25px 103px 30px 30px;
+}
+
+main .container .main_b .main_bc .main_bc1{
+	float: left;
+	width: 420px;
+	height: 389px;
+	border-right: 1px dashed #999999;
+}
+
+main .container .main_b .main_bc .main_bc1 input{
+	width: 342px;
+	height: 36px;
+	border: 1px solid #ccc;
+}
+main .container .main_b .main_bc .main_bc1 p{
+	font-size: 10px;
+	color: #333333;
+	font-weight: bold;
+	line-height: 24px;
+}
+/*main .container .main_b .main_bc .main_bc1 #code{
+	width: 230px;
+	height: 36px;
+	float: left;
+}*/
+main .container .main_b .main_bc .main_bc1 #showCode{
+	display: block;
+	height: 36px;
+	width: 50px;
+	font-size: 20px;
+	line-height: 36px;
+	/*float: left;*/
+	background-color: #ccc;
+}
+/*sign in框*/
+main .container .main_b .main_bc .main_bc1 .si{
+	display: block;
+	width: 66px;
+	height: 32px;
+	background-color: #F78F1C;
+	color: #fff;
+	font-size: 11px;
+	line-height: 32px;
+	text-align: center;
+	margin-top: 20px;
+	font-weight: bold;
+	text-decoration: none;
+}
+main .container .main_b .main_bc .main_bc1 .lab{
+	margin-bottom: 18px;
+}
+main .container .main_b .main_bc .main_bc1 .word{
+	margin-bottom: 18px;
+}
+/*右半部分*/
+main .container .main_b .main_bc .main_bc2{
+	float: left;
+	width: 358px;
+	height: 389px;
+	margin-left: 68px;
+}
+
+/*右半黄色背景框*/
+main .container .main_bc .main_bc2 .box1{
+	width: 347px;
+	height: 40px;
+	border: 1px dashed #FF1D00;
+	background-color: #FFFFCC;
+	font-size: 12px;
+	position: relative;
+}
+main .container .main_bc .main_bc2 .box1 h3{
+	color: #FF4500;	
+	font-weight: normal;
+}
+main .container .main_bc .main_bc2 .box1 p{
+	float: left;
+	color: #228B6F;
+}
+main .container .main_bc .main_bc2 .box1 a{
+	color: #333333;
+	position: absolute;
+	right: 0;
+}
+
+main .container .main_bc .main_bc2 .adress_r{
+	margin-top: 20px;
+}
+main .container .main_bc .main_bc2 h3{
+	font-size: 10px;
+	color: #333333;
+	line-height: 18px;
+	
+}
+main .container .main_bc .main_bc2 input{
+	width: 344px;
+	height: 30px;
+	border: 1px solid #ccc;
+}
+/*右半email*/
+main .container .main_bc .main_bc2 .adress_r p{
+	font-size: 12px;
+	color: #9999B3;
+}
+/*右半password*/
+main .container .main_bc .main_bc2 .pw_r{
+	margin-top: 10px;
+}
+/*右半验证密码*/
+main .container .main_bc .main_bc2 .cp_r{
+	margin-top: 10px;
+}
+/*右半多选框*/
+main .container .main_bc .main_bc2 .box2{
+	margin-top: 14px;
+	position: relative;
+	
+}
+/*第一个多选框*/
+main .container .main_bc .main_bc2 .ck1{
+	display: block;
+	float: left;
+	width: 14px;
+	height: 14px;
+}
+main .container .main_bc .main_bc2 .box2_1 span{
+	display: block;
+	/*float: left;*/
+	font-size: 12px;
+	color: #333333;
+	font-weight: bold;
+	line-height: 24px;
+}
+main .container .main_bc .main_bc2 .box2_1 p{
+	font-size: 12px;
+	color: #333333;
+	line-height: 24px;
+}
+/*第二个多选框*/
+main .container .main_bc .main_bc2 .ck2{
+	float: left;
+	width: 14px;
+	height: 14px;
+}
+main .container .main_bc .main_bc2 .box2_1 span a{
+	color: #1155CC;
+}
+/*右半register*/
+main .container .main_bc .main_bc2 .reg{
+	display: block;
+	margin-top: 22px;
+	width: 71px;
+	height: 32px;
+	background-color: #F97F15;
+	font-size: 12px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	line-height: 32px;
+	text-decoration: none;
+}

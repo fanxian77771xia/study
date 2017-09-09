@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            #goodslist{
+                float:left;
+                width:800px;
+            }
+            
+            #carlist{
+                float:left;
+                width:200px;
+                position:relative;
+            }
+            .box{
+                float:left;
+                 position:relative;
+            }
+            .goods{
+                width:248px;
+                height:294px;
+                
+               
+            }
+            .active{
+                position:absolute;
+                top:0;
+                left:0;
+            }
+            .add{
+
+            }
+        </style>
+        <script type="text/javascript" src='js/common.js'></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded',()=>{
+                var goodslist = document.querySelector('#goodslist');
+                var box = document.querySelector('.box');
+                var goods = document.querySelector('.goods');
+                var carlist = document.querySelector('#carlist');
+                var cargoods = carlist.children;
+
+                // 购物车商品种类数
+                var carnum = 0;
+
+                goodslist.onclick = function(e){
+                    e = e || window.event;
+                    var target = e.target || e.srcElement;
+                    if(target.nodeName.toLowerCase()=='img'){
+                        var _goods = target.cloneNode(true);console.log(_goods)
+                        _goods.className = 'active goods';
+                        target.parentNode.appendChild(_goods);
+                        
+                        // 计算x轴的移动距离
+                        var movex = 800 - target.parentNode.offsetLeft; 
+                        // 计算y轴的移动距离
+                        // 先判断购物车里有无此商品
+                        console.log(_goods.getAttribute('idx'))
+                        for(i=0;i<cargoods.length;i++){
+                            if(cargoods[i].idx==target.idx){
+                                var movey = cargoods.children[i].offsetTop;
+                            }
+                        }
+                        
+
+                        animate(_goods,{left:movex},xiaoshi);
+                        
+                        function xiaoshi(){
+                            _goods.style.display= 'none';
+                            var addcar = target.cloneNode(true);
+                            // addcar.className = 'goods';
+                            carlist.appendChild(addcar);
+
+                        }
+                    }
+                    
+                   
+                    
+                    
+
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <div id='goodslist'>
+            <div class='box'>
+                <img src='img/g1.jpg' height="294" width="247" class='goods'  idx='1'></img>
+            </div>
+            <div class='box'>
+                <img src='img/g2.jpg' height="294" width="247" class='goods'  idx='2'></img>
+            </div>
+        </div>
+        
+        <div id='carlist'>
+            
+        </div>
+    </body>
+</html>

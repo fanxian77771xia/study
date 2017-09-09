@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded',function(){
+
+                // 1构造函数
+                // 在构造函数中this的指向就是构造函数本身,当然，我们使用这个函数的时候也是把他当做构造函数来使用的
+                function Person(){
+                  this.name='老王';
+                  this.age='99';
+                  console.log(this)//Person {'name':'老王','age':'99'}
+                }
+                // 那么p1.name为什么打印出来是‘老王’，因为p1是构造函数的Person的实例化出来的，所以p1继承了Person的属性
+                var p1=new Person();
+                console.log(p1.name)//'老王'
+
+                // 2.函数作为对象的一个属性
+                // 函数作为对象的一个属性，并且作为对象的一个属性被调用时，box不仅作为一个对象的一个属性，而且的确是作为对象的一个属性被调用。结果this就是obj对象。
+                var obj={
+                  'name':'老王',
+                  'age':'99',
+                  'box':function(){
+                  console.log(this);//obj{'name':'老王','age':'99','box':function}
+                  }
+                }
+                obj.box();
+
+                // 当这个函数不是作为对象的一个属性被调用时,在下面的代码中我定义了一个全局变量fn，并且赋值为obj.box，那么此时obj.box就已经发生变化了，fn是全局变量，属于window，那么此时this指向window。
+                var obj={
+                  'name':'老王',
+                  'age':'99',
+                  'box':function(){
+                  console.log(this);
+                  }
+                }
+                var fn=obj.box
+                fn();
+                
+                // 3.全局 & 调用普通函数
+                // 在全局下，this永远指向的都是window
+                // 普通函数在调用时，其中的this也都是window
+                b ='厉害了我的哥';
+                var box=function(){
+                  console.log(this.b);//厉害了我的哥
+                }
+                box();
+
+                //由于此时a不是window下的变量(它在window下的函数里的变量)所以this指向的window下没有定义变量a
+                var a ='厉害了我的哥';
+                var box=function(){
+                  console.log(this.a);//undefined
+                }
+                box();
+
+                //计时器里的this指向window
+                function jishi(){
+                  var timer = setInterval(function(){
+                    console.log(this)//window对象
+                  },1000)
+                }
+                jishi();
+
+                var obj2 = {
+                  jishi : function(){
+                      var timer = setInterval(function(){
+                      console.log(this)//window对象
+                    },1000)
+                  }
+                } 
+                obj2.jishi();
+            })
+            
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

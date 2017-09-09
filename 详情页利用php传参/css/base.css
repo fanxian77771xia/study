@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* CSS Document */
+/* reset 默认样式重置 */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, q, em, ul, li, ol, dl, dt, dd, form, article, aside, embed, table, td, th, input, button, legend, fieldset, blockquote, textarea, label, strong, img, cite,figure,select { margin: 0; padding: 0; outline: none; }
+body { font-family:'Microsoft 微软雅黑'; font-size: 12px; line-height: 1;  margin: 0 auto; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; font-size: 100%; }
+table { border-collapse: collapse; }
+ul, li , ol, li{ list-style: none; }
+
+img{ border: none; vertical-align:middle;border: 0 none;display:block; }
+em, cite, address,i { font-style: normal; font-weight: normal; }
+a { text-decoration:none; }
+
+input { outline:none; border:none; }
+input::-ms-clear { display:none; }
+textarea { outline:none; resize:none; }
+
+article, aside, canvas, details, figcaption, figure,
+      footer, header, hgroup, menu, nav, section, summary
+      { 
+        display: block;
+       }
+main{ box-sizing:border-box;}
+/* 清浮动 */
+.fl{float:left;}
+.fr{float:right;}
+.content{
+	width: 980px;
+	margin: 0 auto;
+  min-width: 980px;
+}
+/*清除浮动*/
+.clear::after{
+	content: "";
+	display: block;	
+	height: 0;
+	clear: both;
+	overflow: hidden;
+	zoom: 1;
+	visibility: hidden;
+}
+input,button{
+    outline: none;
+}
+*{
+    box-sizing: border-box;
+}
+i{
+  font-style:normal;
+}
+
+
+@font-face {font-family: "iconfont";
+  src: url('../font/iconfont.eot?t=1503898005665'); /* IE9*/
+  src: url('../font/iconfont.eot?t=1503898005665#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../font/iconfont.woff?t=1503898005665') format('woff'), /* chrome, firefox */
+  url('../font/iconfont.ttf?t=1503898005665') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../font/iconfont.svg?t=1503898005665#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gouwuche:before { content: "\f0148"; }
+
+.icon-facebook:before { content: "\f0004"; }
+
+.icon-zhuye:before { content: "\e62a"; }
+
+.icon-off:before { content: "\e610"; }
+
+.icon-iconjia:before { content: "\e61f"; }
+
+.icon-menu:before { content: "\e600"; }
+
+.icon-fangdajing:before { content: "\e696"; }
+
+.icon-nanxingrenwu:before { content: "\e60c"; }
+
+.icon-dayin:before { content: "\e93e"; }
+
+.icon-xinfeng:before { content: "\e64d"; }
+
+.icon-wenhao5:before { content: "\e63a"; }
+
+.icon-arrfill_l:before { content: "\e501"; }
+
+.icon-jiantou-copy:before { content: "\e690"; }
+
+.icon-dengyu:before { content: "\e619"; }
+
+.icon-next:before { content: "\e625"; }
+
+.icon-liwu:before { content: "\e662"; }
+
+.icon-phone:before { content: "\e65a"; }
+
+.icon-jiantou:before { content: "\e60e"; }
+
+.icon-xihuan:before { content: "\e60b"; }
+
+.icon-xing:before { content: "\e60f"; }
+
+.icon-zan2:before { content: "\e505"; }
+
+.icon-zhuyi:before { content: "\e611"; }
+
+.icon-zan1:before { content: "\e503"; }
+
+
+
+
+
+
+.fixed3{position:fixed;top:0;left:0;right:0;
+            z-index: 99;}
+.fixed1{position:fixed;top:87px;left:0;right:0;z-index: 99;}
+.fixed2{position:fixed;top:17px;left:0;right:0;z-index: 99;}

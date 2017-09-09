@@ -1,0 +1,126 @@
+#main{
+    width: 100%;
+}
+.body_box{
+    width: 765px;
+    padding-left: 5px;
+    float:right;
+    border-left:2px solid #ccc;
+    box-shadow:5px 0px 10px 0px #ccc inset;
+}
+.body_box .section4 h3{
+    line-height:28px;
+    padding-left:15px;
+    border-bottom:1px solid #333;
+}
+.body_box .section4 ul{
+    padding: 12px 0 20px 30px;
+    height:792px;
+    width:740px;
+}
+.body_box .section4 ul li{
+    float:left;
+    height:260px;
+    width:160px;
+    margin-right:25px;
+    line-height:18px;
+}
+.body_box .section4 ul li a{
+    color:#333;
+    display:block;
+    width: 160px;
+}
+.body_box .section4 ul li p:nth-child(3) span{
+    text-decoration:line-through;
+}
+.body_box .section4 ul li p:nth-child(4) span{
+    color:#FF4552;
+}
+.body_box .section4 ul li p:nth-child(5) {
+    color:#699053;
+}
+.body_box .body_past3 ul{
+    width: 710px;
+    height: 280px;
+    overflow:hidden;
+    padding: 12px 30px 0;
+}
+.body_box .body_past3 ul li{
+    height: 280px;
+    margin-right:23px;
+}
+.body_box .body_past3 ul li:nth-child(4),
+.body_box .body_past3 ul li:nth-child(8),
+.body_box .body_past3 ul li:nth-child(12){
+    margin-right: 0;
+}
+
+.body_box .section5{
+    padding-left:20px;
+    border-bottom:5px solid #fff;
+}
+.body_box .section5 a{
+    text-decoration: underline;
+}
+.body_box .section5 h3{
+    line-height:48px;
+    font-size:14px;
+    padding-left: 25px;
+    position: relative;
+}
+.body_box .section5 h3::before{
+    content:"";
+    display:block;
+    width: 23px;
+    height:18px;
+    background:url("../../images/main.fw.png") ;
+    position: absolute;
+    left: 0px;
+    top: 15px;
+}
+.body_box .section5 h3 a{
+    color:#333;
+    font-weight:normal;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.body_box .section5 ul li{
+    height:90px;
+}
+.body_box .section5 ul img{
+    float:left;
+}
+.body_box .section5 ul li a{
+    color:#333;
+    line-height:12px;
+}
+.body_box .section5 ul li p{
+    color:#9A9685;
+    padding-top: 8px;
+    line-height:14px;
+}
+#main .body_bottom{
+    padding-top: 24px;
+    font-size:12px;
+    height:24px;
+    float:left;
+}
+#main .body_bottom a{
+    float:right;
+    color:#333;
+    font-size: 10px;
+    padding:0 12px;
+    height:10px;
+    line-height:10px;
+    border-right: 1px solid #333;
+}
+#main .body_bottom a:first-child{
+    border-right: 0 none;
+}
+.fiximg{
+    position: relative;
+    top: 260px;
+    right: 85px;
+    position:fixed;
+}

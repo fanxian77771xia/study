@@ -1,0 +1,111 @@
+#main .body_box .nav .cont ul{
+    background:#E9E9E9;
+ }
+#main .body_box .nav .cont ul li{
+    float:left;
+
+ }
+#main .body_box .nav .cont ul li a{
+    display:block;
+    position:relative;
+    width: 139px;
+    height: 133px;
+    text-align: center;
+    background: #fff;
+    margin:7px;
+ }
+#main .body_box .nav .cont ul li a i{
+    display:block;
+    width: 110px;
+    height: 72px;
+    background:url("../../images/indexBody1/jing.fw.png") 0 0;
+    position:absolute;
+    top:20%;
+    left:50%;
+    transform:translate(-50%, -20%);
+ }
+#main .body_box .nav .cont ul li:nth-child(2) a i{
+    display:block;
+    width: 110px;
+    height: 72px;
+    background:url("../../images/indexBody1/jing.fw.png") -200px 0;
+    position:absolute;
+    top:20%;
+    left:50%;
+    transform:translate(-50%, -20%);
+ }
+#main .body_box .nav .cont ul li:nth-child(8) a i{
+    display:block;
+    width: 110px;
+    height: 72px;
+    background:url("../../images/indexBody1/jing.fw.png") -400px 0;
+    position:absolute;
+    top:20%;
+    left:50%;
+    transform:translate(-50%, -20%);
+ }
+#main .body_box .nav .cont ul li a span{
+    position:absolute;
+    bottom:0;
+    left:0;
+ }
+#main .main .cont{
+    background:#E1E8EE;
+    background: -webkit-gradient(linear,center top, center bottom,color-stop(0,#D0DEE7),color-stop(1,#F9FAFB));
+}
+ #main .main h2{
+    color:#333333;
+    font-size: 14px;
+    padding-left: 14px;
+    line-height: 48px;
+ }
+ #main .main ul li{
+    float:left;
+    width: 49%;
+    position:relative;
+
+ }
+ #main .main ul li:first-child{
+    padding-left: 15px;
+ }
+ #main .main ul li i{
+    display:block;
+    width: 134px;
+    height: 134px;
+    background:url("../../images/indexBody1/jing.fw.png") -600px 0;
+    text-align: center;
+    position:relative;
+ }
+ #main .main ul li i i{
+    /*content:"39%";*/
+    display:block;
+     background:#EF1514;
+     width: 42px;
+     height: 42px;
+     color:#FFFFFF;
+     border-radius: 50%;
+     position:absolute;
+     top:-10px;
+     right:10px;
+ }
+ #main .main ul li:last-child>i{
+    display:block;
+    width: 134px;
+    height: 134px;
+    background:url("../../images/indexBody1/jing.fw.png") 0 -100px;
+ }
+ #main .main ul li span{
+  position:absolute;
+  top:0;
+  right:27px;
+ }
+ #main .main ul li span p{
+    line-height: 18px;
+    font-size:12px;
+ }
+ #main .main ul li span p:nth-child(3){
+    padding-top: 10px;
+ }
+ #main .main ul li span p:nth-child(4){
+    color:red;
+ }

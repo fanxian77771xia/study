@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            *{
+                margin:0;
+                padding:0;
+            }
+            html,body{
+                height:100%;
+                background:black;
+                overflow:hidden;
+            }
+            #tip{
+                overflow:hidden;
+                height:100px;
+                background:#bcb;
+                border-bottom:3px solid #f00;
+            }
+            #btn{
+                display:block;
+                width:300px;
+                height:50px;
+                margin:20px auto;
+                border-radius:10px 10px;
+            }
+        </style>
+        <script type="text/javascript" src='js/common.js'></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded',function(){
+                // 页面对象
+                var page = {
+                    ele : 'body';
+
+                    init : function(){
+                        this.ele = document.querySelector('this.ele');
+
+                        this.ele.onclick = function(e){
+                            e = e || window.event;
+                            var point = {x:e.clientX,y:e.clientY};
+                            new Firework(point)
+                        }
+                    }
+
+                }
+
+                //烟花对象
+                function Firework(point){
+                    this.color = randomColor();
+                    this.top = point.y;
+                    this.left = point.x;
+                    this.r = randomNumber(40,80);
+                }
+                Firework.prototype = {
+                    constructor : Firework;
+
+                    init:function(){
+                        var fire = document.createElement('div');
+                        fire.style.color = this.color;
+                        fire.style.left = this.left;
+                        fire.style.top = this.top;
+                        page.ele.appendChild(fire);
+                        this.ele = fire;
+
+                        return this;
+                    }
+                    move:function(){
+                        animate(fire)
+                    }
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <div id='tip'><button id='btn'>自动放烟花</button></div>
+        
+    </body>
+</html>

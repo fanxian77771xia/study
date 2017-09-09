@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <style type="text/css">
+        ul{list-style: none;padding:0;margin:0;}
+        .box{position:relative;border:5px solid #ddd;width:224px;height:288px;overflow: hidden;}
+        .box ul{position:absolute;top:0;left:0;overflow: hidden;}
+        .box li{float:left;}
+        .box img{display: block;}
+        .box .page{position: absolute;left:50%;bottom:10px;transform: translate(-50%,0);}
+        .box .page span{display:inline-block;margin:0 3px;width:6px;height:6px;overflow: hidden;background-color: #ddd;border-radius: 50%;text-indent:-1000px;box-shadow: 0 0 5px rgba(0,0,0,.5)}
+        .box .page span.active{background-color: #fc0;}
+    </style>
+    <script type="text/javascript" src='js/common.js'></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded',function(){
+            // 创建对象
+            
+
+            // 描述对象
+            function banner(opt){
+                // 定义属性
+                this.ele = ".box" || opt.ele,
+
+                this.page = "page" || opt.page,
+
+                this.imgs = opt.imgs,
+
+                this.direction = opt.direction,
+                
+                this.duration = opt.duration,
+
+                this.index = 0
+
+                this.ye = document.createElement('div');
+                
+            }
+
+            banner.prototype ={
+                constructor : banner,
+                
+                // 初始化
+                init : function(){
+                    this.ele = document.querySelector(this.ele);
+                    var ul = document.createElement('ul');
+                    
+                    ul.innerHTML = this.imgs.map(function(item){
+                        return `<li><img src="${item}"></li>`;
+                    }).join('');
+                    if(this.direction==='left'){
+                        ul.style.width = this.imgs.length*this.ele.clientWidth+'px';
+                    }
+                    this.ele.appendChild(ul);
+
+                    
+                    this.ye.className = this.page;
+                    for(i=0;i<this.imgs.length;i++){
+                        var point = document.createElement('span');
+                        this.ye.appendChild(point);
+                    }
+                    this.ele.appendChild(this.ye);
+
+                    return this;
+                },
+
+                move : function(){
+
+                    this._move();
+
+                    return this;
+                },
+
+                stop : function(){
+                    this.ele.onmouseenter = ()=>{
+                        clearInterval(this.timer);
+                    }
+                    return this;
+                },
+
+                remove : function(){
+                    this.ele.onmouseleave =function(){
+                        this._move();
+                    }.bind(this)
+                    return this;
+                },
+
+                _move : function(){
+                        
+                        this.timer = setInterval(function(){
+                            var ul = this.ele.querySelector('ul');
+                            this.index++;
+                            if(this.index>8){
+                                this.index = 0;
+                            }
+                            if(this.direction==='left'){
+                                pingyi={
+                                    left:-this.ele.clientWidth*this.index,
+                                }
+                            }
+                            else{
+                                pingyi={
+                                    top:-this.ele.clientHeight*this.index, 
+                                }                          
+                            }
+                            for(j=0;j<this.imgs.length;j++){
+                                if(j==this.index){
+                                    this.ye.children[j].className = "active";
+                                }else{
+                                    this.ye.children[j].className = "";
+                                }
+                            }
+                            animate(ul,pingyi)
+                             
+                        }.bind(this),this.duration)
+                    }
+
+            }
+            new banner({
+                ele:".box",
+                page:"page",
+                direction:'left',
+                imgs:['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg','img/5.jpg','img/6.jpg','img/7.jpg','img/8.jpg','img/9.jpg'],
+                duration:3000
+
+            }).init().move().stop().remove();
+        })
+    </script>
+    <body>
+        <div class='box'>
+            
+        </div>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            body{position:relative;}
+            #box{width:400px;height:400px;border:1px solid black;position:absolute;}
+            #box p:first-child{text-align:center;width:100%;border-bottom:2px solid black;}
+            #box p:last-child{}
+        </style>
+        <script type="text/javascript" src='js/common.js'></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded',function(){
+                var body = document.querySelector('body');
+                //创建弹窗对象
+                function Movewindow(opt){
+                    this.ele = opt.ele;
+                    this.width = opt.width;
+                    this.height = opt.height;
+                    this.move = opt.move;
+                    this.title = opt.title;
+                    this.content = opt.content;
+                    this.closebtn = opt.closebtn;
+                   
+                }
+
+                Movewindow.prototype = {
+                    constructor : Movewindow,
+
+                    init:function(){
+                        this.ele = document.querySelector(this.ele);
+                        this.ele.style.width = this.width;
+                        this.ele.style.height = this.height;
+                        var title = document.createElement('p');
+                        title.innerHTML = this.title;
+                        this.ele.appendChild(title);
+                        var content = document.createElement('p');
+                        content.innerHTML = this.content;
+                        this.ele.appendChild(content);
+                        body.appendChild(this.ele);
+                        console.log(this)
+                        return this;
+                    },
+                   
+                    mov:function(){
+                        console.log(888)
+                        this.ele.onmousedown = (e)=>{
+                            e = e || window.event;
+                            target = e.target || e.srcElement;
+                            if(target.id == 'box'){
+                                var ox = e.offsetX;
+                                var oy = e.offsetY;
+
+                                this.ele.onmousemove = ()=>{
+                                    this.ele.style.left = (this.ele.offsetLeft - ox) + 'px';
+                                    this.ele.style.top = (this.ele.offsetTop - oy) + 'px';
+                                }
+                            }
+                            
+                        }
+                        
+                    }
+                }
+
+                new Movewindow({
+                    ele:'#box',
+                    width:400,
+                    height:400,
+                    move:true,
+                    title:'弹窗',
+                    content:'内容',
+                    closebtn:'&times;'
+                }).init().mov();
+            })
+        </script>
+    </head>
+    <body>
+        <div id='box'>
+            
+        </div>
+    </body>
+</html>

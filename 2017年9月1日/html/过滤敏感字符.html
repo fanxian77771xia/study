@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            document.onreadystatechange = function(){
+                if(document.readyState=='interactive'){
+                    var input = document.querySelector('#input');
+                    var btn = document.querySelector('#btn');
+                    var result = document.querySelector('#result');
+
+                    migan = ['fuck','yellow','drug'];
+                    btn.onclick = function(){
+                        var _input = input.value;
+
+                        migan.forEach(function(item){
+                            var reg = new RegExp(item,'ig')
+                            _input = _input.replace(reg,'**')
+                        })
+                        result.innerHTML = _input;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="input"/><button id='btn'>提交</button>
+        <div id='result'></div>
+    </body>
+</html>

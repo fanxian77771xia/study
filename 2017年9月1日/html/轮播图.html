@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            #box{
+                width:810px;
+                height:320px;
+                margin:0 auto;
+                border:1px solid #f00;
+                overflow:hidden;
+                position:relative;
+            }
+            #box ul{
+                margin:0;
+                padding:0;
+                position:absolute;
+                left:0;
+                top:0;
+            }
+            #box li{
+                list-style:none;
+
+            }
+            #box img{
+                display:block;
+            }
+        </style>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded",()=>{
+                var ul = document.querySelector("ul");
+
+                function autoplay(){
+                    
+                    
+                    var imgHeight = 320;
+                    var index = 0;
+                    
+                    setInterval(()=>{
+                        
+                        var currentTop = ul.offsetTop;
+                        index +=1;
+                        var targetTop = -index*imgHeight;
+                        if(index ==4){
+                            index = 0;
+                        }
+                        var timer = setInterval(()=>{
+                            
+                            console.log(targetTop);
+                            console.log(currentTop);
+                            var speed = (targetTop-currentTop)/10;
+                            ul.style.top = currentTop + speed +'px';
+                            currentTop = ul.offsetTop;
+                            if(currentTop==targetTop){
+                                clearInterval(timer);
+                                ul.style.top = targetTop + 'px';
+                            }
+                        },30)
+                        ul.style.top = targetTop + 'px';
+                    },3000)
+                }
+                autoplay();
+            })
+        </script>
+    </head>
+    <body>
+        <div id="box">
+            <ul>
+                <li><img src="../img/001.jpg" alt="" /></li>
+                <li><img src="../img/002.jpg" alt="" /></li>
+                <li><img src="../img/003.jpg" alt="" /></li>
+                <li><img src="../img/004.jpg" alt="" /></li>
+            </ul>
+        </div>
+    </body>
+</html>

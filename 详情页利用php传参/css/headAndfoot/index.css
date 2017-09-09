@@ -1,0 +1,273 @@
+body,html{
+    min-width: 1260px;
+}
+header{
+    background-color: #FF4500;
+    color:#fff;
+}
+header .container .box1 p{
+    float: left;
+    width: 290px;
+    padding-top: 5px;
+}
+header .container  a{
+    color:#fff;
+    text-decoration: underline;
+}
+header .container .box1 p span{
+    color:#FFCC00;
+}
+header .container .box1 ul{
+    padding-top: 3px;
+    float: right;
+    width: 412px;
+    line-height: 17px;
+}
+header .container .box1 ul li{
+    float: left;
+    padding-left: 14px;
+}
+header .container .box1 ul li #select1{
+    border: 0 none;
+    color:#fff;
+    text-decoration: underline;
+    background-color: #FF4500;
+}
+header .container .box1 ul li #select2{
+    border: 0 none;
+    color:#FFC100;
+    background-color: #FF4500;
+}
+header  .box2{
+    padding:0 141.5px;
+
+    background-color: #FF4500;
+}
+header  .box2 form{
+    float: left;
+    position:relative;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+header  .box2 form input{
+    float:left;
+    width: 333px;
+    height: 30px;
+    border:1px solid #593B3A;
+    background-color: #CFCFCF;
+    padding-left: 22px;
+}
+header  .box2 form button{
+    width: 80px;
+    height: 32px;
+    border:1px solid #593B3A;
+    background-color: #6C5448;
+    color:#fff;
+}
+header  .box2 form i{
+    display: block;
+    position: absolute;
+    width: 14px;
+    height: 13px;
+    background-image: url("../../images/headAndFoot/search.png");
+    top:10px;
+    left:6px;
+}
+header  .box2 p{
+    float: left;
+    margin-left: 50px;
+    height: 26px;
+    line-height: 24px;
+}
+header  .box2 p a{
+    margin-right: 10px;
+    text-decoration: underline;
+    color:#fff;
+    float:left;
+}
+header  .box2 span {
+    float: right;
+    padding-top: 17px;
+    display: block;
+    font-size: 16px;
+    height: 26px;
+    width: 160px;
+}
+nav{
+    background-color: #2B2B2B;
+}
+nav .container .first_nav{
+    width: 200px;
+    height: 30px;
+    font-size: 13px;
+    padding-left: 10px;
+    font-weight: bold;
+    color:#CFCFC6;
+    background-color: #404040;
+    position:relative;
+    line-height: 30px;
+}
+nav .container .first_nav:hover .second_nav{
+    display: block;
+}
+nav .container .first_nav i{
+    display: block;
+    width: 16px;
+    height: 8px;
+    background-image: url("../../images/headAndFoot/jingling.fw.png");
+    position:absolute;
+    top:10px;
+    right:14px;
+}
+nav .container .first_nav .second_nav{
+    position:absolute;
+    display: none;
+    box-shadow: -3px 4px 3px 0;
+    top:30px;
+    left:0px;
+    z-index: 1000;
+}
+nav .container .first_nav .second_nav>li{
+    height: 70px;
+    position:relative;
+    color:#464F6B;
+    background-color: #Fff;
+    padding-left: 10px;
+    padding-right: 12px;
+}
+nav .container .first_nav .second_nav>li:nth-child(2n){
+    background-color: #F1F1F1;
+}
+nav .container .first_nav .second_nav li p{
+    font-weight: bold;
+    line-height: 26px;
+}
+nav .container .first_nav .second_nav li ul li{
+    float: left;
+    font-size: 10px;
+    line-height:16px ;
+    font-weight: normal;
+    padding-right: 10px;
+}
+nav .container .first_nav .second_nav i{
+    background: url("../../images/headAndFoot/jingling.fw.png") 0 -62px;
+}
+nav .container .first_nav .second_nav>li:nth-child(2n) i{
+     background: url("../../images/headAndFoot/jingling.fw.png") 0 -82px;
+}
+nav .container .bar li{
+    float: left;
+    height: 30px;
+}
+nav .container .bar li a{
+    box-sizing: content-box;
+    border-right: 2px solid #C2BF9D;
+    color:#fff;
+    font-weight: bold;
+    line-height: 30px;
+}
+nav .container .bar li a span{
+    display: inline-block;
+    height: 30px;
+    padding:0 15px;
+}
+nav .container .bar li:last-child a{
+    border:0 none;
+}
+nav .container .bar li:hover{
+    background-color: #E54205;
+}
+nav .container .bar li:hover a{
+    border-right:2px solid #E54205;
+}
+nav .container .bar li:hover a span{
+    background-color: #E54205;
+    margin-left: -2px;
+    border-left:2px solid #E54205;
+}
+nav .container .bar2{
+    float: right;
+}
+footer .container{
+    border-top: 2px solid #5A5A5A;
+}
+footer .container .ul_f .li_f{
+    width: 180px;
+    margin-left: 5px;
+    padding-top: 14px;
+    float: left;
+}
+footer .container .ul_f .li_f li{
+    line-height: 18px;
+    
+}
+footer .container .ul_f .li_f li a{
+    color:#333333;
+}
+footer .container .ul_f .li_f li:first-child{
+    padding-bottom: 8px;
+    font-weight: bold;
+    line-height: 12px;
+}
+footer .container .ul_f .li_f div{
+    height: 24px;
+    margin-bottom: 6px;
+    padding-left:22px;
+    background-image: url("../../images/headAndFoot/jingling.fw.png");
+}
+footer .container .ul_f .li_f .div1{
+    background-position: 0 -120px;
+}
+footer .container .ul_f .li_f .div2{
+    background-position: 0 -147px;
+}
+footer .container .ul_f .li_f .div3{
+    background-position: 0 -181px;
+}
+footer .container .ul_f .li_f div p{
+    color:#D2691E;
+}
+footer .container .ul_f .li_f div span{
+    font-style: italic;
+}
+footer .container .ul_f .li_r{
+    width: 220px;
+}
+footer .container .ul_f .li_r p{
+    line-height: 16px;
+}
+footer .container .ul_f .li_r .ul_r{
+    border-left: 1px solid #ccc;
+    padding-left: 40px;
+    background: url("../../images/headAndFoot/jingling.fw.png") 0 -222px no-repeat;
+}
+footer .container .ul_f .li_r .ul_r form{
+    padding-top: 6px;
+}
+footer .container .ul_f .li_r .ul_r form input{
+    border:1px solid #5A5A5A;
+    padding-left: 4px;
+    width: 170px;
+    height: 20px;
+}
+footer .container .ul_f .li_r .ul_r form button{
+    height: 22px;
+    margin-top: 5px;
+    width:90px;
+    border:2px solid #444;
+    background-color: #585858;
+    color:#DBDBDA;
+    line-height: 4px; 
+}
+footer .container h4{
+    padding-top: 36px;
+    padding-bottom: 18px;
+    text-align: center;
+}
+footer .container h5{
+    text-align: center;
+    padding-bottom: 22px;
+}
+footer .container h5 span{
+    color:#FF4500;
+}
